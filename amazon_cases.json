@@ -1,0 +1,476 @@
+{
+  "app": "amazon",
+  "template": [
+    "<Home Page><Categories: [list]><Search Bar: \"\"><Cart: # items><Profile Icon>",
+    "<Search Input><Text Field: \"\"><Suggestions: [items]><Recent: [items]>",
+    "<Search Results><Product: [Name]><Price: ¥[Amount]><Add to Cart Button><View Product Button>",
+    "<Product Page><Product: [Name]><Options: Color, Size><Buy Now | Add to Cart Buttons>",
+    "<Cart><Items: [List]><Total: ¥[Amount]><Proceed to Checkout Button><Remove Buttons>",
+    "<Checkout><Shipping Address: [Address]><Payment Method: [Method]><Total: ¥[Amount]><Place Order Button>",
+    "<Order Confirmation><Order ID: #[ID]><Product Summary><Total: ¥[Amount]><Track Order Button>",
+    "<Track Order><Status: [Stage]><ETA: [Date/Time]><Track Package Button><Cancel Order Button>",
+    "<Select Payment Method><Options: Credit Card, Alipay, WeChat><Pay Now Button><Cancel Button>",
+    "<Flash Sale><Countdown: [Time Left]><Deals: [List]><Add to Cart | Buy Now Buttons>",
+    "<Group Buy Page><Deal: [Item]><Discounted Price><Buy Now | Invite Friends Buttons>",
+    "<Pre-Order Page><Product: [Name]><Delivery Date: [Date]><Pre-order Button><Back Button>",
+    "<Membership Page><Benefits: [List]><Join Now Button><Close Button>",
+    "<Profile Page><Order History: [# Items]><Membership Status: [Active/Inactive]><Settings Icon>",
+    "<Order History><Recent Orders: [Items]><Track Order | Reorder Buttons>",
+    "<Cart Empty><Message: \"No items in cart\"><Shop Now Button><Home Button>",
+    "<Product Variant Selector><Color: [Options]><Size: [Options]><Confirm Selection Button>",
+    "<Review & Rating><Product: [Name]><Star Rating><Text Field: \"Write your review\"><Submit Button>",
+    "<Address Management><Saved Addresses: [List]><Add New Address Button><Edit/Delete Buttons>",
+    "<Account Settings><Payment Methods | Addresses | Order History><Sign Out Button>"
+  ],
+  "cases": [
+    {
+      "case_id": "case1",
+      "steps": [
+        {
+          "state": "<Home Page><Categories: Electronics, Clothing, Groceries><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search Input><Text Field: \"\"><Suggestions: Laptop, Phone, Headphones><Recent: Shoes, Table>",
+          "action": "set_text:<\"Laptop\">"
+        },
+        {
+          "state": "<Search Results><Product: MacBook Pro 16\"><Price: ¥15,999><Add to Cart Button><View Product Button>",
+          "action": "touch:<Add to Cart Button>"
+        },
+        {
+          "state": "<Cart><Items: MacBook Pro 16 x1><Price: ¥15,999><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Proceed to Checkout Button>"
+        },
+        {
+          "state": "<Checkout><Shipping Address: 123 Main St><Payment Method: Credit Card><Total: ¥15,999><Place Order Button>",
+          "action": "touch:<Place Order Button>"
+        },
+        {
+          "state": "<Order Confirmation><Order ID: #456789><Product: MacBook Pro 16><Price: ¥15,999><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: Dispatched><ETA: 2 Days><Track Package Button><Cancel Order Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Track Order><Status: In Transit><Location: Shanghai><ETA: 1 Day><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Cart><Items: MacBook Pro 16 x1><Price: ¥15,999><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Remove Button>"
+        },
+        {
+          "state": "<Home Page><Categories: Electronics, Clothing, Groceries><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        }
+      ]
+    },
+    {
+      "case_id": "case2",
+      "steps": [
+        {
+          "state": "<Home Page><Categories: Computers, Books, Appliances><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search Input><Text Field: \"\"><Suggestions: Smartphone, Headphones, Mouse><Recent: Laptop, TV>",
+          "action": "set_text:<\"Smartphone\">"
+        },
+        {
+          "state": "<Search Results><Product: Xiaomi Mi 11\"><Price: ¥3,999><Add to Cart Button><View Product Button>",
+          "action": "touch:<View Product Button>"
+        },
+        {
+          "state": "<Product Page><Xiaomi Mi 11><Color: Black><Storage: 128GB><Buy Now Button><Add to Cart Button>",
+          "action": "touch:<Add to Cart Button>"
+        },
+        {
+          "state": "<Cart><Items: Xiaomi Mi 11 x1><Price: ¥3,999><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Proceed to Checkout Button>"
+        },
+        {
+          "state": "<Checkout><Shipping Address: 456 Park Ave><Payment Method: Debit Card><Total: ¥3,999><Place Order Button>",
+          "action": "touch:<Place Order Button>"
+        },
+        {
+          "state": "<Order Confirmation><Order ID: #789456><Product: Xiaomi Mi 11><Price: ¥3,999><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: Delivered><ETA: Delivered Today><Track Package Button><Return Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Cart><Items: Xiaomi Mi 11 x1><Price: ¥3,999><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Remove Button>"
+        },
+        {
+          "state": "<Home Page><Categories: Computers, Books, Appliances><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        }
+      ]
+    },
+    {
+      "case_id": "case3",
+      "steps": [
+        {
+          "state": "<Home Page><Categories: Clothing, Beauty, Home Appliances><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search Input><Text Field: \"\"><Suggestions: Shoes, Jackets, Dresses><Recent: Bags, Laptop>",
+          "action": "set_text:<\"Bags\">"
+        },
+        {
+          "state": "<Search Results><Product: Leather Handbag\"><Price: ¥599><Add to Cart Button><View Product Button>",
+          "action": "touch:<View Product Button>"
+        },
+        {
+          "state": "<Product Page><Leather Handbag><Color: Brown><Material: Leather><Buy Now Button><Add to Cart Button>",
+          "action": "touch:<Add to Cart Button>"
+        },
+        {
+          "state": "<Cart><Items: Leather Handbag x1><Price: ¥599><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Proceed to Checkout Button>"
+        },
+        {
+          "state": "<Checkout><Shipping Address: 789 High St><Payment Method: Alipay><Total: ¥599><Place Order Button>",
+          "action": "touch:<Place Order Button>"
+        },
+        {
+          "state": "<Order Confirmation><Order ID: #112233><Product: Leather Handbag><Price: ¥599><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: In Transit><ETA: 3 Days><Track Package Button><Cancel Order Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Cart><Items: Leather Handbag x1><Price: ¥599><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Remove Button>"
+        },
+        {
+          "state": "<Home Page><Categories: Clothing, Beauty, Home Appliances><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        }
+      ]
+    },
+    {
+      "case_id": "case4",
+      "steps": [
+        {
+          "state": "<Home Page><Categories: Electronics, Furniture, Toys><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search Input><Text Field: \"\"><Suggestions: Washing Machine, Refrigerator, TV><Recent: Phone, Laptop>",
+          "action": "set_text:<\"Washing Machine\">"
+        },
+        {
+          "state": "<Search Results><Product: Haier Washing Machine\"><Price: ¥1,599><Add to Cart Button><View Product Button>",
+          "action": "touch:<View Product Button>"
+        },
+        {
+          "state": "<Product Page><Haier Washing Machine><Capacity: 8kg><Type: Front Load><Buy Now Button><Add to Cart Button>",
+          "action": "touch:<Add to Cart Button>"
+        },
+        {
+          "state": "<Cart><Items: Haier Washing Machine x1><Price: ¥1,599><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Proceed to Checkout Button>"
+        },
+        {
+          "state": "<Checkout><Shipping Address: 1234 Riverside><Payment Method: WeChat Pay><Total: ¥1,599><Place Order Button>",
+          "action": "touch:<Place Order Button>"
+        },
+        {
+          "state": "<Order Confirmation><Order ID: #334455><Product: Haier Washing Machine><Price: ¥1,599><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: Out for Delivery><ETA: 1 Day><Track Package Button><Cancel Order Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Cart><Items: Haier Washing Machine x1><Price: ¥1,599><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Remove Button>"
+        },
+        {
+          "state": "<Home Page><Categories: Electronics, Furniture, Toys><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        }
+      ]
+    },
+    {
+      "case_id": "case5",
+      "steps": [
+        {
+          "state": "<Home Page><Categories: Fashion, Electronics, Groceries><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search Input><Text Field: \"\"><Suggestions: Camera, Shoes, Makeup><Recent: Clothing, Bags>",
+          "action": "set_text:<\"Camera\">"
+        },
+        {
+          "state": "<Search Results><Product: Canon EOS 5D\"><Price: ¥6,999><Add to Cart Button><View Product Button>",
+          "action": "touch:<View Product Button>"
+        },
+        {
+          "state": "<Product Page><Canon EOS 5D><Lens: 24-70mm><Color: Black><Buy Now Button><Add to Cart Button>",
+          "action": "touch:<Add to Cart Button>"
+        },
+        {
+          "state": "<Cart><Items: Canon EOS 5D x1><Price: ¥6,999><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Proceed to Checkout Button>"
+        },
+        {
+          "state": "<Checkout><Shipping Address: 321 Maple St><Payment Method: Alipay><Total: ¥6,999><Place Order Button>",
+          "action": "touch:<Place Order Button>"
+        },
+        {
+          "state": "<Order Confirmation><Order ID: #223344><Product: Canon EOS 5D><Price: ¥6,999><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: Shipped><ETA: 2 Days><Track Package Button><Cancel Order Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Cart><Items: Canon EOS 5D x1><Price: ¥6,999><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Remove Button>"
+        },
+        {
+          "state": "<Home Page><Categories: Fashion, Electronics, Groceries><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        }
+      ]
+    },
+    {
+      "case_id": "case6",
+      "steps": [
+        {
+          "state": "<Home Page><Featured: Flash Sale, Today’s Deals><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Flash Sale>"
+        },
+        {
+          "state": "<Flash Sale><Timer: 2:15 left><Product: iPhone 14 - ¥4999><Add to Cart Button><Buy Now Button>",
+          "action": "touch:<Buy Now Button>"
+        },
+        {
+          "state": "<Select Payment Method><Balance: ¥2000><Coupon: ¥500><Pay Now Button><Cancel Button>",
+          "action": "touch:<Pay Now Button>"
+        },
+        {
+          "state": "<Payment Confirmation><Amount: ¥4499><Transaction ID: #324567><Track Order Button><Back to Home Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Order Status><Status: Preparing for shipment><ETA: 3 Days><Track Package Button><Cancel Order Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Track Order><Shipping: DHL><Current Location: Guangzhou><ETA: 2 Days><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Home Page><Featured: Flash Sale, Today’s Deals><Cart: 1 item><Profile Icon>",
+          "action": "touch:<Cart>"
+        },
+        {
+          "state": "<Cart><Items: iPhone 14 x1><Price: ¥4999><Proceed to Checkout Button><Remove Item Button>",
+          "action": "touch:<Remove Item Button>"
+        },
+        {
+          "state": "<Home Page><Categories: Electronics, Clothing, Groceries><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search Input><Text Field: \"\"><Suggestions: Laptop, Phone, Shoes><Recent: iPhone 14>",
+          "action": "set_text:<\"Laptop\">"
+        }
+      ]
+    },
+    {
+      "case_id": "case7",
+      "steps": [
+        {
+          "state": "<Home Page><Membership Benefits: Free Shipping, Special Deals><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Membership Benefits>"
+        },
+        {
+          "state": "<Membership Page><Exclusive Deals: 20% Off Electronics, 15% Off Fashion><Join Now Button><Close Button>",
+          "action": "touch:<Join Now Button>"
+        },
+        {
+          "state": "<Checkout><Member Price: ¥1599><Total with Discount: ¥1399><Shipping Address: 123 Main St><Place Order Button>",
+          "action": "touch:<Place Order Button>"
+        },
+        {
+          "state": "<Order Confirmation><Order ID: #998877><Product: Samsung TV 55\"><Price: ¥1399><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: In Progress><ETA: 2 Days><Track Package Button><Cancel Order Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Track Order><Shipping Carrier: FedEx><Current Location: Beijing><ETA: 1 Day><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Home Page><Featured: Electronics, Membership Deals, Latest Products><Cart: 1 item><Profile Icon>",
+          "action": "touch:<Cart>"
+        },
+        {
+          "state": "<Cart><Items: Samsung TV 55\" x1><Price: ¥1399><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Remove Button>"
+        },
+        {
+          "state": "<Home Page><Membership: Active><Cart: 0 items><Search Bar: \"\"><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        },
+        {
+          "state": "<Profile Page><Membership Status: Active><Payment Methods: Visa, PayPal><Sign Out Button>",
+          "action": "touch:<Sign Out Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case8",
+      "steps": [
+        {
+          "state": "<Home Page><Pre-Order: Samsung Galaxy S22 - ¥6999><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Pre-Order>"
+        },
+        {
+          "state": "<Pre-Order Page><Available: 300 units><Delivery Date: May 10><Pre-order Now Button><Back Button>",
+          "action": "touch:<Pre-order Now Button>"
+        },
+        {
+          "state": "<Checkout><Shipping Address: 123 Elm St><Payment Method: WeChat Pay><Total: ¥6999><Place Order Button>",
+          "action": "touch:<Place Order Button>"
+        },
+        {
+          "state": "<Order Confirmation><Order ID: #564738><Product: Samsung Galaxy S22><Price: ¥6999><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: Pre-order in Progress><ETA: May 10><Track Package Button><Cancel Order Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Track Order><Status: Awaiting Shipment><ETA: May 10><Shipping Carrier: Not Available><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Home Page><Pre-Order: Samsung Galaxy S22 - ¥6999><Cart: 1 item><Profile Icon>",
+          "action": "touch:<Cart>"
+        },
+        {
+          "state": "<Cart><Items: Samsung Galaxy S22 x1><Price: ¥6999><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Remove Button>"
+        },
+        {
+          "state": "<Home Page><Pre-Order: Samsung Galaxy S22 - ¥6999><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        },
+        {
+          "state": "<Profile Page><Order History: Samsung Galaxy S22><Pre-order Status: Awaiting Shipment><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case9",
+      "steps": [
+        {
+          "state": "<Home Page><Group Buy: Pizza for ¥29, Limited Time Offer><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Group Buy>"
+        },
+        {
+          "state": "<Group Buy Page><Deal: Pizza for ¥29 (Normal Price ¥59)><Add to Cart Button><Buy Now Button>",
+          "action": "touch:<Buy Now Button>"
+        },
+        {
+          "state": "<Checkout><Shipping Address: 456 Maple St><Payment Method: Credit Card><Total: ¥29><Place Order Button>",
+          "action": "touch:<Place Order Button>"
+        },
+        {
+          "state": "<Order Confirmation><Order ID: #223344><Product: Pizza Deal><Price: ¥29><Track Order Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: Preparing Food><ETA: 20 min><Track Package Button><Cancel Order Button>",
+          "action": "touch:<Track Package Button>"
+        },
+        {
+          "state": "<Track Order><Status: Out for Delivery><Location: Local Restaurant><ETA: 10 min><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Home Page><Group Buy: Pizza for ¥29, Limited Time Offer><Cart: 1 item><Profile Icon>",
+          "action": "touch:<Cart>"
+        },
+        {
+          "state": "<Cart><Items: Pizza Deal x1><Price: ¥29><Proceed to Checkout Button><Remove Button>",
+          "action": "touch:<Remove Button>"
+        },
+        {
+          "state": "<Home Page><Categories: Food, Electronics, Fashion><Search Bar: \"\"><Cart: 0 items><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        },
+        {
+          "state": "<Profile Page><Order History: Pizza Deal x1><Track Order Button><Cancel Button>",
+          "action": "touch:<Track Order Button>"
+        },
+        {
+          "state": "template:",
+          "action": "1. State: <Home Page><Categories: [list]><Search Bar: \"\"><Cart: # items><Profile Icon>"
+        },
+        {
+          "state": "<Search Input><Text Field: \"\"><Suggestions: [items]><Recent: [items]>",
+          "action": "3. State: <Search Results><Product: [Name]><Price: ¥[Amount]><Add to Cart Button><View Product Button>"
+        },
+        {
+          "state": "<Product Page><Product: [Name]><Options: Color, Size><Buy Now | Add to Cart Buttons>",
+          "action": "5. State: <Cart><Items: [List]><Total: ¥[Amount]><Proceed to Checkout Button><Remove Buttons>"
+        },
+        {
+          "state": "<Checkout><Shipping Address: [Address]><Payment Method: [Method]><Total: ¥[Amount]><Place Order Button>",
+          "action": "7. State: <Order Confirmation><Order ID: #[ID]><Product Summary><Total: ¥[Amount]><Track Order Button>"
+        },
+        {
+          "state": "<Track Order><Status: [Stage]><ETA: [Date/Time]><Track Package Button><Cancel Order Button>",
+          "action": "9. State: <Select Payment Method><Options: Credit Card, Alipay, WeChat><Pay Now Button><Cancel Button>"
+        },
+        {
+          "state": "<Flash Sale><Countdown: [Time Left]><Deals: [List]><Add to Cart | Buy Now Buttons>",
+          "action": "11. State: <Group Buy Page><Deal: [Item]><Discounted Price><Buy Now | Invite Friends Buttons>"
+        },
+        {
+          "state": "<Pre-Order Page><Product: [Name]><Delivery Date: [Date]><Pre-order Button><Back Button>",
+          "action": "13. State: <Membership Page><Benefits: [List]><Join Now Button><Close Button>"
+        },
+        {
+          "state": "<Profile Page><Order History: [# Items]><Membership Status: [Active/Inactive]><Settings Icon>",
+          "action": "15. State: <Order History><Recent Orders: [Items]><Track Order | Reorder Buttons>"
+        },
+        {
+          "state": "<Cart Empty><Message: \"No items in cart\"><Shop Now Button><Home Button>",
+          "action": "17. State: <Product Variant Selector><Color: [Options]><Size: [Options]><Confirm Selection Button>"
+        },
+        {
+          "state": "<Review & Rating><Product: [Name]><Star Rating><Text Field: \"Write your review\"><Submit Button>",
+          "action": "19. State: <Address Management><Saved Addresses: [List]><Add New Address Button><Edit/Delete Buttons>"
+        },
+        {
+          "state": "<Account Settings><Payment Methods | Addresses | Order History><Sign Out Button>",
+          "action": ""
+        }
+      ]
+    }
+  ]
+}

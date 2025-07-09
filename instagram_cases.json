@@ -1,0 +1,521 @@
+{
+  "app": "instagram",
+  "template": [
+    "<Home Feed><Posts: #><Tabs: Home | Explore | Messages><Profile Icon>",
+    "<Create Post><Add Media Button><Caption Field: \"\"><Tag People><Share Button>",
+    "<Post Detail><Image/Video><Likes: #><Comments: #><View Likes | View Comments>",
+    "<Comments><All Comments: #><Add Comment Field: \"\"><Post Button>",
+    "<Edit Post><Caption Field: \"\"><Done Button><Delete Post Button>",
+    "<Profile Page><Username: @name><Posts: #><Followers: #><Following: #><Edit Profile>",
+    "<Edit Profile><Name: \"\"><Bio: \"\"><Website: \"\"><Done Button>",
+    "<Explore><Trending Topics><Search Bar: \"\"><Suggested Accounts | Tags>",
+    "<Search><Text Field: \"\"><Recent Searches><Suggestions><Results List>",
+    "<Chat View><Conversation with @user><Message Field: \"\"><Send | Media | Emoji Buttons>",
+    "<Story Camera><Capture Button><Switch Lens><Gallery Access><Flash Toggle>",
+    "<Story Editor><Image/Video Preview><Text | Stickers | Draw Tools><Post to Story>",
+    "<Story View><Viewer Count: #><Reactions><Forward | Back Controls><Delete Button>",
+    "<Live Stream><Viewer Count><Like Button><Comment Field><Gift Button>",
+    "<Send Gift><Balance: ¥><Gift Options><Confirm | Cancel Buttons>",
+    "<Group Page><Group Name><Members: #><New Post Button><Invite | Rules Buttons>",
+    "<Create Group Post><Text Field: \"\"><Add Image><Post Button>",
+    "<Reels Feed><Video by @user><Like | Comment | Share | Save Buttons>",
+    "<Saved Posts><Posts: #><Remove from Saved Button><Filter Tabs: All | Videos | Images>",
+    "<Settings><Account | Notifications | Privacy><Switch Account><Log Out Button>"
+  ],
+  "cases": [
+    {
+      "case_id": "case1",
+      "steps": [
+        {
+          "state": "<Home Feed><Posts: 42><+ Post Button><Stories | Explore | Messages><Profile Icon>",
+          "action": "touch:<+ Post Button>"
+        },
+        {
+          "state": "<Create Post><Add Photo Button><Caption Field: \"\"><Tag People Button><Share Button>",
+          "action": "touch:<Add Photo Button>"
+        },
+        {
+          "state": "<Select Photo><Gallery: 120 images><Selected: IMG_3041.jpg><Next Button>",
+          "action": "touch:<Next Button>"
+        },
+        {
+          "state": "<Create Post><Image: IMG_3041.jpg><Caption Field: \"\"><Tag People Button><Share Button>",
+          "action": "set_text:<\"Hiking adventure 🌲🌄\">"
+        },
+        {
+          "state": "<Create Post><Image: IMG_3041.jpg><Caption: Hiking adventure 🌲🌄><Tag People Button><Share Button>",
+          "action": "touch:<Tag People Button>"
+        },
+        {
+          "state": "<Tag People><Suggested: Alex, Jane><Selected: @Jane><Done Button>",
+          "action": "touch:<Done Button>"
+        },
+        {
+          "state": "<Create Post><Caption: Hiking adventure 🌲🌄><Tagged: @Jane><Share Button>",
+          "action": "touch:<Share Button>"
+        },
+        {
+          "state": "<Home Feed><New Post Appeared><Caption: Hiking adventure 🌲🌄><Likes: 0><Comments: 0>",
+          "action": "touch:<Profile Icon>"
+        },
+        {
+          "state": "<Profile><Posts: 56><Followers: 892><Following: 310><Edit Profile Button>",
+          "action": "touch:<Edit Profile Button>"
+        },
+        {
+          "state": "<Edit Profile><Bio: \"Nature lover 🌿\"><Website: \"\"><Done Button>",
+          "action": "touch:<Done Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case2",
+      "steps": [
+        {
+          "state": "<Explore><Trending Topics><Search Bar: \"\"><Suggested Accounts><Home | Explore | Messages>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search><Text Field: \"\"><Recent: JohnDoe, Nature><Suggestions: TravelBlog, AI_Expert>",
+          "action": "set_text:<\"TravelBlog\">"
+        },
+        {
+          "state": "<Search Results><Account: @TravelBlog><Follow Button><Message Button>",
+          "action": "touch:<Follow Button>"
+        },
+        {
+          "state": "<Profile: @TravelBlog><Posts: 220><Followers: 12.3K><Following: 134><Message Button>",
+          "action": "touch:<Message Button>"
+        },
+        {
+          "state": "<Chat with @TravelBlog><Message Field: \"\"><Send Button><Media Button>",
+          "action": "set_text:<\"Love your photos! Where was the last trip?\">"
+        },
+        {
+          "state": "<Chat><Message Drafted><Send Button><Media Button>",
+          "action": "touch:<Send Button>"
+        },
+        {
+          "state": "<Chat><Message Sent: \"Love your photos!\"><Last Seen: Active 2h ago><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Profile: @TravelBlog><Followed><Posts: 220><Followers: 12.3K><Message Button>",
+          "action": "touch:<Back>"
+        },
+        {
+          "state": "<Search Results><Account: @TravelBlog><Followed><Message Button>",
+          "action": "touch:<Back>"
+        },
+        {
+          "state": "<Explore><Trending Topics><Search Bar: \"\"><Suggested: Nature, Tech><Messages Icon>",
+          "action": "touch:<Messages Icon>"
+        }
+      ]
+    },
+    {
+      "case_id": "case3",
+      "steps": [
+        {
+          "state": "<Home Feed><New Posts: 6><Post by @Alice><Like | Comment | Share Buttons><Profile Icon>",
+          "action": "touch:<Comment Button>"
+        },
+        {
+          "state": "<Comments for @Alice><Comments: 23><Add Comment Field: \"\"><Post Button>",
+          "action": "set_text:<\"Beautiful photo! 😍\">"
+        },
+        {
+          "state": "<Add Comment><Text: Beautiful photo! 😍><Post Button>",
+          "action": "touch:<Post Button>"
+        },
+        {
+          "state": "<Comments><Your Comment: Beautiful photo! 😍><All Comments: 24><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Home Feed><Post by @Alice><Comment Count: 24><Like Button><Share Button>",
+          "action": "touch:<Like Button>"
+        },
+        {
+          "state": "<Post by @Alice><Liked><Likes: 1501><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Home Feed><Post by @Bob><Like | Comment | Share Buttons><Post by @Cathy>",
+          "action": "touch:<Share Button>"
+        },
+        {
+          "state": "<Share Options><Send in DM, Add to Story, Copy Link><Cancel Button>",
+          "action": "touch:<Copy Link>"
+        },
+        {
+          "state": "<Link Copied><Toast: \"Post link copied\"><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Home Feed><Posts: Updated><Scroll Position: Middle><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        }
+      ]
+    },
+    {
+      "case_id": "case4",
+      "steps": [
+        {
+          "state": "<Home Feed><Tabs: Home | Search | Notifications | Messages><Notifications Badge: 3>",
+          "action": "touch:<Notifications>"
+        },
+        {
+          "state": "<Notifications><@Emma liked your post><@James followed you><@Zoe commented><Back Button>",
+          "action": "touch:<@Emma liked your post>"
+        },
+        {
+          "state": "<Post Detail><Image: Beach Sunset><Likes: 34><View Likes Button><Comments: 5>",
+          "action": "touch:<View Likes Button>"
+        },
+        {
+          "state": "<Liked by><Users: @Emma, @David, @Sophie, @Liam><Follow Buttons: available>",
+          "action": "touch:<@Sophie>"
+        },
+        {
+          "state": "<Profile: @Sophie><Followers: 1.2K><Following: 300><Follow Button><Message Button>",
+          "action": "touch:<Follow Button>"
+        },
+        {
+          "state": "<Profile: @Sophie><Followed><Posts: 128><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Liked by><Followed: @Sophie><Users: @David, @Liam><Close Button>",
+          "action": "touch:<Close Button>"
+        },
+        {
+          "state": "<Post Detail><Image: Beach Sunset><Back Button><Likes: 34><Comments: 5>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Notifications><Cleared: @Emma liked your post><@James followed you><@Zoe commented>",
+          "action": "touch:<Back>"
+        },
+        {
+          "state": "<Home Feed><Posts: Refreshed><Notifications Badge: 2><Messages Icon>",
+          "action": "touch:<Messages Icon>"
+        }
+      ]
+    },
+    {
+      "case_id": "case5",
+      "steps": [
+        {
+          "state": "<Profile Page><Posts: 82><Followers: 1500><Edit Profile Button><Settings Icon>",
+          "action": "touch:<Edit Profile Button>"
+        },
+        {
+          "state": "<Edit Profile><Name: Lily><Bio: \"Photographer 🌸\"><Website: \"\"><Done Button>",
+          "action": "set_text:<\"Photographer & traveler ✈️\">"
+        },
+        {
+          "state": "<Edit Profile><Bio: Photographer & traveler ✈️><Done Button>",
+          "action": "touch:<Done Button>"
+        },
+        {
+          "state": "<Profile Page><Bio Updated><Posts: 82><Followers: 1500><+ Post Button>",
+          "action": "touch:<+ Post Button>"
+        },
+        {
+          "state": "<Create Post><Caption Field: \"\"><Add Photo Button><Share Button>",
+          "action": "set_text:<\"Excited for my next trip to Iceland 🇮🇸\">"
+        },
+        {
+          "state": "<Create Post><Caption: Excited for my next trip><No Image><Share Button>",
+          "action": "touch:<Share Button>"
+        },
+        {
+          "state": "<Profile Page><New Post Appeared><Followers: 1500><Posts: 83>",
+          "action": "touch:<Followers>"
+        },
+        {
+          "state": "<Followers List><@Alex, @Nina, @Tom><Search Bar: \"\"><Followed Tags>",
+          "action": "touch:<@Alex>"
+        },
+        {
+          "state": "<Profile: @Alex><Posts: 105><Followed><Message Button>",
+          "action": "touch:<Message Button>"
+        },
+        {
+          "state": "<Chat with @Alex><Message Field: \"\"><Send Button><Back Button>",
+          "action": "set_text:<\"Hey! Let's catch up this weekend.\">"
+        }
+      ]
+    },
+    {
+      "case_id": "case6",
+      "steps": [
+        {
+          "state": "<Home Feed><Tabs: Home | Explore | Reels | Story Camera><Story Ring: \"New\"><Profile Icon>",
+          "action": "touch:<Story Camera>"
+        },
+        {
+          "state": "<Camera Mode><Lens: Front><Flash: Off><Capture Button><Gallery Icon>",
+          "action": "touch:<Gallery Icon>"
+        },
+        {
+          "state": "<Select from Gallery><Images: 200><Selected: IMG_1122.jpg><Next Button>",
+          "action": "touch:<Next Button>"
+        },
+        {
+          "state": "<Story Editor><Image: IMG_1122.jpg><Add Text Button><Stickers Button><Post to Story Button>",
+          "action": "touch:<Add Text Button>"
+        },
+        {
+          "state": "<Text Editor><Text Field: \"\"><Color Options><Done Button>",
+          "action": "set_text:<\"Road trip 🛣️\">"
+        },
+        {
+          "state": "<Story Editor><Text: Road trip 🛣️><Post to Story Button><Back Button>",
+          "action": "touch:<Post to Story Button>"
+        },
+        {
+          "state": "<Home Feed><Story Ring: \"You\"><Watch Button><Add More><Messages Icon>",
+          "action": "touch:<Watch Button>"
+        },
+        {
+          "state": "<Your Story><IMG_1122.jpg><Views: 0><Share Button><Delete Button>",
+          "action": "touch:<Share Button>"
+        },
+        {
+          "state": "<Share Options><Send to: Alex, Rachel><Send Button><Cancel>",
+          "action": "touch:<Send Button>"
+        },
+        {
+          "state": "<Story Shared><Toast: \"Sent to 2 friends\"><Back Button><Profile Icon>",
+          "action": "touch:<Back Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case7",
+      "steps": [
+        {
+          "state": "<Home Feed><Live Banner: @GameMaster is Live><Tabs: Home | Search | Live | Messages>",
+          "action": "touch:<Live Banner>"
+        },
+        {
+          "state": "<Live Stream: @GameMaster><Viewers: 12.3K><Like Button><Comment Field><Send Button>",
+          "action": "set_text:<\"Wow! Great gameplay 🔥\">"
+        },
+        {
+          "state": "<Comment Field><Text: \"Wow! Great gameplay 🔥\"><Send Button>",
+          "action": "touch:<Send Button>"
+        },
+        {
+          "state": "<Live Stream><Comment Sent><Hearts Floating><Gift Icon><Exit Button>",
+          "action": "touch:<Gift Icon>"
+        },
+        {
+          "state": "<Send Gift><Balance: ¥20><Popular Gifts: Rose ¥5, Fireworks ¥15><Back Button>",
+          "action": "touch:<Fireworks>"
+        },
+        {
+          "state": "<Gift Sent><Balance Updated: ¥5><Reaction: 🎆><Streamer: \"Thanks!\"><Exit Button>",
+          "action": "touch:<Exit Button>"
+        },
+        {
+          "state": "<Home Feed><Recommended: Live, Reels, Topics><Live Banner: Hidden>",
+          "action": "touch:<Messages Icon>"
+        },
+        {
+          "state": "<Messages><Conversations: Alex, Gaming Group><New Chat Button><Requests: 1>",
+          "action": "touch:<Gaming Group>"
+        },
+        {
+          "state": "<Group Chat><Members: 18><Latest: \"Join the next stream tonight!\"><Reply Field>",
+          "action": "set_text:<\"I’ll join for sure 👍\">"
+        },
+        {
+          "state": "<Group Chat><Message Drafted: \"I’ll join for sure 👍\"><Send Button>",
+          "action": "touch:<Send Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case8",
+      "steps": [
+        {
+          "state": "<Explore><Search Bar: \"\"><Trending: Recipes, Fitness, Pets><Suggested Groups>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search><Text Field: \"\"><Recent: Yoga, Football><Suggestions: Hiking, AI>",
+          "action": "set_text:<\"Hiking Group\">"
+        },
+        {
+          "state": "<Search Results><Group: Mountain Hikers><Members: 23K><Join Group Button>",
+          "action": "touch:<Join Group Button>"
+        },
+        {
+          "state": "<Group Page><Joined: Pending Approval><Rules Button><Invite Button>",
+          "action": "touch:<Rules Button>"
+        },
+        {
+          "state": "<Group Rules><Rule 1: Be respectful><Rule 2: No spam><Close Button>",
+          "action": "touch:<Close Button>"
+        },
+        {
+          "state": "<Group Page><Approval: Waiting><Posts: Hidden><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Search Results><Joined: Pending><Group: Hiking Tips><Join Group Button>",
+          "action": "touch:<Join Group Button>"
+        },
+        {
+          "state": "<Group Page><Joined: Approved><Posts Visible><New Post Button><Invite Button>",
+          "action": "touch:<New Post Button>"
+        },
+        {
+          "state": "<Create Post><Text Field: \"\"><Add Photo><Post Button>",
+          "action": "set_text:<\"Any good trails near Beijing?\">"
+        },
+        {
+          "state": "<Create Post><Text: Any good trails near Beijing?><Post Button>",
+          "action": "touch:<Post Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case9",
+      "steps": [
+        {
+          "state": "<Video Feed><Reels: Auto-play><Post by @CatLover><Like | Comment | Save | Share Buttons>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Video Saved><Toast: \"Saved to Favorites\"><Like Button><Scroll Down Button>",
+          "action": "touch:<Scroll Down Button>"
+        },
+        {
+          "state": "<Next Video><By: @StreetFood><Sound: Original><Like | Comment | Save | Share>",
+          "action": "touch:<Like Button>"
+        },
+        {
+          "state": "<Video Liked><Likes: 213.4K><Comments: 3.2K><Save Button>",
+          "action": "touch:<Comment Button>"
+        },
+        {
+          "state": "<Comments><Add Comment Field: \"\"><Scroll: Visible><Post Button>",
+          "action": "set_text:<\"Looks so delicious! 😋\">"
+        },
+        {
+          "state": "<Add Comment><Text: Looks so delicious! 😋><Post Button>",
+          "action": "touch:<Post Button>"
+        },
+        {
+          "state": "<Comments><Your Comment Added><All Comments: Updated><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Reels Feed><Current: @StreetFood><Bottom Bar: Explore | Inbox | Profile>",
+          "action": "touch:<Profile>"
+        },
+        {
+          "state": "<Your Profile><Tabs: Posts | Saved | Tagged><Saved: 1 New><Settings Icon>",
+          "action": "touch:<Saved>"
+        },
+        {
+          "state": "<Saved Posts><Reels: @CatLover><Post: Cat jumps over fence><Remove Button>",
+          "action": "touch:<Remove Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case10",
+      "steps": [
+        {
+          "state": "<Home Feed><Logged In: @main_user><Profile Icon><Tabs: Home | Notifications | Messages>",
+          "action": "touch:<Profile Icon>"
+        },
+        {
+          "state": "<Profile Page><Username: @main_user><Posts: 132><Switch Account Button><Settings>",
+          "action": "touch:<Switch Account Button>"
+        },
+        {
+          "state": "<Account Switcher><Accounts: @main_user, @work_profile><Add Account><Cancel Button>",
+          "action": "touch:<@work_profile>"
+        },
+        {
+          "state": "<Home Feed><Logged In: @work_profile><Profile Icon><Notifications: 4>",
+          "action": "touch:<Notifications>"
+        },
+        {
+          "state": "<Notifications><@client1 liked your post><@colleague mentioned you><Back Button>",
+          "action": "touch:<@client1 liked your post>"
+        },
+        {
+          "state": "<Post Detail><Image: Graph Design><Likes: 20><View Comments Button><Edit Button>",
+          "action": "touch:<Edit Button>"
+        },
+        {
+          "state": "<Edit Post><Caption: \"Initial draft of Q3 project\"><Done Button>",
+          "action": "set_text:<\"Updated draft for Q3 release 📊\">"
+        },
+        {
+          "state": "<Edit Post><Caption Updated><Done Button>",
+          "action": "touch:<Done Button>"
+        },
+        {
+          "state": "<Post Updated><Likes: 20><Caption: Updated draft for Q3 release 📊><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Notifications><@client1 liked><Mention: @colleague><Profile Icon>",
+          "action": "touch:<Profile Icon>"
+        },
+        {
+          "state": "template:",
+          "action": "1. State: <Home Feed><Posts: #><Tabs: Home | Explore | Messages><Profile Icon>"
+        },
+        {
+          "state": "<Create Post><Add Media Button><Caption Field: \"\"><Tag People><Share Button>",
+          "action": "3. State: <Post Detail><Image/Video><Likes: #><Comments: #><View Likes | View Comments>"
+        },
+        {
+          "state": "<Comments><All Comments: #><Add Comment Field: \"\"><Post Button>",
+          "action": "5. State: <Edit Post><Caption Field: \"\"><Done Button><Delete Post Button>"
+        },
+        {
+          "state": "<Profile Page><Username: @name><Posts: #><Followers: #><Following: #><Edit Profile>",
+          "action": "7. State: <Edit Profile><Name: \"\"><Bio: \"\"><Website: \"\"><Done Button>"
+        },
+        {
+          "state": "<Explore><Trending Topics><Search Bar: \"\"><Suggested Accounts | Tags>",
+          "action": "9. State: <Search><Text Field: \"\"><Recent Searches><Suggestions><Results List>"
+        },
+        {
+          "state": "<Chat View><Conversation with @user><Message Field: \"\"><Send | Media | Emoji Buttons>",
+          "action": "11. State: <Story Camera><Capture Button><Switch Lens><Gallery Access><Flash Toggle>"
+        },
+        {
+          "state": "<Story Editor><Image/Video Preview><Text | Stickers | Draw Tools><Post to Story>",
+          "action": "13. State: <Story View><Viewer Count: #><Reactions><Forward | Back Controls><Delete Button>"
+        },
+        {
+          "state": "<Live Stream><Viewer Count><Like Button><Comment Field><Gift Button>",
+          "action": "15. State: <Send Gift><Balance: ¥><Gift Options><Confirm | Cancel Buttons>"
+        },
+        {
+          "state": "<Group Page><Group Name><Members: #><New Post Button><Invite | Rules Buttons>",
+          "action": "17. State: <Create Group Post><Text Field: \"\"><Add Image><Post Button>"
+        },
+        {
+          "state": "<Reels Feed><Video by @user><Like | Comment | Share | Save Buttons>",
+          "action": "19. State: <Saved Posts><Posts: #><Remove from Saved Button><Filter Tabs: All | Videos | Images>"
+        },
+        {
+          "state": "<Settings><Account | Notifications | Privacy><Switch Account><Log Out Button>",
+          "action": ""
+        }
+      ]
+    }
+  ]
+}

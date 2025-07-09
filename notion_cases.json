@@ -1,0 +1,431 @@
+{
+  "app": "notion",
+  "template": [
+    "<Home Screen><Sections or Tabs: Notes | To-Dos | Calendar><+ New Entry><Search | Settings>",
+    "<New Note><Title Field><Body Field><Add Image | Add Tags><Save Button>",
+    "<New To-Do List><Title Field><Add Task Button><Save Button>",
+    "<Task Entry><Input Field><Done Button><Task List Updated>",
+    "<Note View><Title><Body><Tags><Edit | Share | Delete>",
+    "<Reminder Setup><Time Picker><Repeat Option><Save Reminder Button>",
+    "<Tag Manager><Suggested Tags><Selected Tags><Done or Save Button>",
+    "<Image Picker><Gallery or Files><Select Image><Insert>",
+    "<Voice Recorder><Mic Active><Timer><Stop | Save | Transcribe>",
+    "<Transcription Editor><Transcript Field><Edit | Save | Discard>",
+    "<Search Notes><Search Bar><Tag Filters><Input | Result List>",
+    "<Filtered Results><Tag: ___><Notes List><Edit | View>",
+    "<Note Export><Format Option: PDF | Text><Layout | Include Images><Export>",
+    "<Share Menu><Options: Email | Link | PDF><Send | Cancel>",
+    "<Page Editor><Title Field><Date Field><Insert Sticker | Image><Save Page>",
+    "<Timeline Builder><Time Field><Event Field><+ Add Event><Save Timeline>",
+    "<Checklist Manager><Add Item><Save Item><Toggle Completed>",
+    "<Template Gallery><Available Templates><Apply Template><Start Editing>",
+    "<Sticker Collection><Title><Theme or Color><Add Image><Save Collection>",
+    "<Notebook Settings><Sort Options><Backup | Restore><Theme | Notifications>"
+  ],
+  "cases": [
+    {
+      "case_id": "case1",
+      "steps": [
+        {
+          "state": "<Notebook Home><+ New Entry><Recent Notes: 3><Search | Calendar | Settings>",
+          "action": "touch:<+ New Entry>"
+        },
+        {
+          "state": "<New Note><Title Field: \"\"><Body Field: \"\"><+ Add Image><Save Button>",
+          "action": "set_text:<\"Rainy Day Walk\">"
+        },
+        {
+          "state": "<New Note><Title: Rainy Day Walk><Body Field: \"\"><+ Add Image><Save Button>",
+          "action": "set_text:<\"Went for a walk in the rain. Felt peaceful.\">"
+        },
+        {
+          "state": "<New Note><Title: Rainy Day Walk><Body: Text Added><+ Add Image><Save Button>",
+          "action": "touch:<+ Add Image>"
+        },
+        {
+          "state": "<Gallery Picker><Images: IMG_1023, IMG_1025, IMG_1030><Selected: IMG_1025><Insert Button>",
+          "action": "touch:<Insert Button>"
+        },
+        {
+          "state": "<New Note><Image Inserted><Body Text><Tags Button><Save Button>",
+          "action": "touch:<Tags Button>"
+        },
+        {
+          "state": "<Add Tags><Suggested: Nature, Mood, Personal><Selected: Mood><Done Button>",
+          "action": "touch:<Done Button>"
+        },
+        {
+          "state": "<New Note><Tags: Mood><Reminder: Off><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Notebook Home><Note Saved: \"Rainy Day Walk\"><Recent Notes Updated><Search>",
+          "action": "touch:<Search>"
+        },
+        {
+          "state": "<Search Notes><Search Bar: \"\"><Recent Tags: Mood><Input Field>",
+          "action": "set_text:<\"Rainy\">"
+        }
+      ]
+    },
+    {
+      "case_id": "case2",
+      "steps": [
+        {
+          "state": "<Notebook Home><Tabs: Notes | To-Dos | Templates><To-Dos Selected><+ Add List>",
+          "action": "touch:<+ Add List>"
+        },
+        {
+          "state": "<New To-Do><Title Field: \"\"><Add Task Button><Save Button>",
+          "action": "set_text:<\"Morning Routine\">"
+        },
+        {
+          "state": "<New To-Do><Title: Morning Routine><Add Task Button><Save Button>",
+          "action": "touch:<Add Task Button>"
+        },
+        {
+          "state": "<Add Task><Input Field: \"\"><Done Button>",
+          "action": "set_text:<\"Make bed\">"
+        },
+        {
+          "state": "<Task Added: Make bed><+ Add Task><Save Button>",
+          "action": "touch:<Add Task Button>"
+        },
+        {
+          "state": "<Add Task><Input Field: \"\"><Done Button>",
+          "action": "set_text:<\"10 min stretch\">"
+        },
+        {
+          "state": "<Two Tasks Added><Save Button><Back Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<To-Do Lists><Morning Routine: 0/2 Completed><Check Box><Edit Button>",
+          "action": "touch:<Check Box: Make bed>"
+        },
+        {
+          "state": "<Morning Routine><Progress: 1/2><Check Box: 10 min stretch><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<To-Do Overview><Morning Routine: 1/2><+ Add List><Sort: Manual>",
+          "action": "touch:<Sort>"
+        }
+      ]
+    },
+    {
+      "case_id": "case3",
+      "steps": [
+        {
+          "state": "<Notebook Home><+ New Entry><Reminders: 3 Active><Tags Button>",
+          "action": "touch:<+ New Entry>"
+        },
+        {
+          "state": "<New Note><Title Field: \"\"><Body Field: \"\"><Reminder Button><Save Button>",
+          "action": "set_text:<\"Call Dentist\">"
+        },
+        {
+          "state": "<New Note><Title: Call Dentist><Reminder Button><Save Button>",
+          "action": "touch:<Reminder Button>"
+        },
+        {
+          "state": "<Set Reminder><Time Picker: 3:00 PM><Repeat: None><Done Button>",
+          "action": "touch:<Done Button>"
+        },
+        {
+          "state": "<Reminder Set><Add Tags Button><Save Button><Back Button>",
+          "action": "touch:<Add Tags Button>"
+        },
+        {
+          "state": "<Tags List><Suggested: Health, Task, Urgent><Selected: Health><Done Button>",
+          "action": "touch:<Done Button>"
+        },
+        {
+          "state": "<New Note><Reminder: 3:00 PM><Tags: Health><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Notebook Home><New Note Added: Call Dentist><Reminders Badge Updated>",
+          "action": "touch:<Tags Button>"
+        },
+        {
+          "state": "<Tags View><All Tags: Health, Travel, Mood><Select: Health><Back Button>",
+          "action": "touch:<Health>"
+        },
+        {
+          "state": "<Filtered Notes><Tag: Health><Result: Call Dentist><Edit Button>",
+          "action": "touch:<Edit Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case4",
+      "steps": [
+        {
+          "state": "<Notebook Home><Voice Recorder Button><+ New Entry><Search><Settings>",
+          "action": "touch:<Voice Recorder Button>"
+        },
+        {
+          "state": "<Recording><Mic Icon Active><Timer Running><Stop Button>",
+          "action": "touch:<Stop Button>"
+        },
+        {
+          "state": "<Recording Complete><Preview: 00:32><Transcribe Button><Save Audio>",
+          "action": "touch:<Transcribe Button>"
+        },
+        {
+          "state": "<Transcription Processing><Language: English><Estimated Time: 10 sec>",
+          "action": "touch:<Wait>"
+        },
+        {
+          "state": "<Transcript Ready><Editable Field: \"\"><Edit | Save | Discard>",
+          "action": "set_text:<\"Meeting summary with marketing team. Launch date confirmed.\">"
+        },
+        {
+          "state": "<Transcript Edited><Back | Save Buttons><Audio Linked>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Notebook Home><New Voice Note Saved><Search | Tags><Sort>",
+          "action": "touch:<Search>"
+        },
+        {
+          "state": "<Search Notes><Search Bar: \"\"><Recent: Meeting><Input Field>",
+          "action": "set_text:<\"marketing\">"
+        },
+        {
+          "state": "<Search Result><1 Note Found: Voice Note><Tap to Open><Share Button>",
+          "action": "touch:<Share Button>"
+        },
+        {
+          "state": "<Share Options><Send via Email | Copy to Clipboard><Cancel>",
+          "action": "touch:<Send via Email>"
+        }
+      ]
+    },
+    {
+      "case_id": "case5",
+      "steps": [
+        {
+          "state": "<Notebook Home><Note: \"Study Plan\"><Date: Jul 7><More Options Icon>",
+          "action": "touch:<More Options Icon>"
+        },
+        {
+          "state": "<Note Options><Edit | Duplicate | Export | Delete><Selected: Export>",
+          "action": "touch:<Export>"
+        },
+        {
+          "state": "<Export Note><Formats: PDF, Text><Selected: PDF><Next Button>",
+          "action": "touch:<Next Button>"
+        },
+        {
+          "state": "<Export Settings><Include Images: ON><Layout: Portrait><Export Button>",
+          "action": "touch:<Export Button>"
+        },
+        {
+          "state": "<Export Success><Saved to Files/Notes><Open | Share><Done Button>",
+          "action": "touch:<Share>"
+        },
+        {
+          "state": "<Share Menu><Send via: Email, Drive, WhatsApp><Select: Email>",
+          "action": "touch:<Email>"
+        },
+        {
+          "state": "<Email Draft><To: \"\"><Subject: Study Plan.pdf><Attach: Yes>",
+          "action": "set_text:<\"project@example.com\">"
+        },
+        {
+          "state": "<Email Draft><To: project@example.com><Send Button><Edit Body>",
+          "action": "touch:<Send Button>"
+        },
+        {
+          "state": "<Notebook Home><Note Shared><Toast: Email sent><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Notebook Home><View Mode><Last Shared: Study Plan><New Entry Button>",
+          "action": "touch:<New Entry Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case6",
+      "steps": [
+        {
+          "state": "<Home><Sections: Daily | Weekly | Travel><Travel Selected><+ New Page>",
+          "action": "touch:<+ New Page>"
+        },
+        {
+          "state": "<New Page><Title Field: \"\"><Date: Empty><Insert Sticker><Save Button>",
+          "action": "set_text:<\"Osaka Trip Plan\">"
+        },
+        {
+          "state": "<Page Title Set><Date: Empty><Add Timeline Button><Insert Sticker>",
+          "action": "set_text:<\"2025-08-15\">"
+        },
+        {
+          "state": "<Page Editor><Date: 2025-08-15><Add Timeline><Insert Image>",
+          "action": "touch:<Add Timeline>"
+        },
+        {
+          "state": "<Timeline Editor><Time Field: \"\"><Event Field: \"\"><+ Add>",
+          "action": "set_text:<\"09:00 - Arrive at Kansai Airport\">"
+        },
+        {
+          "state": "<Timeline><1 Event Added><+ Add Another><Save Button>",
+          "action": "set_text:<\"11:00 - Visit Kuromon Market\">"
+        },
+        {
+          "state": "<Timeline><2 Events><Save Timeline Button><Back>",
+          "action": "touch:<Save Timeline Button>"
+        },
+        {
+          "state": "<Page Editor><Timeline Added><Insert Image><Sticker Pack>",
+          "action": "touch:<Insert Image>"
+        },
+        {
+          "state": "<Image Picker><Gallery: IMG_1012, IMG_1013><Select: IMG_1012><Insert>",
+          "action": "touch:<Insert>"
+        },
+        {
+          "state": "<Page Editor><Image Inserted><Timeline: 2 Events><Save Button>",
+          "action": "touch:<Save Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case7",
+      "steps": [
+        {
+          "state": "<Home><Sections: Monthly | Weekly | Goals><Monthly Selected><+ Use Template>",
+          "action": "touch:<+ Use Template>"
+        },
+        {
+          "state": "<Template Gallery><Templates: Grid, Floral, Minimal><Selected: Floral><Apply Button>",
+          "action": "touch:<Apply Button>"
+        },
+        {
+          "state": "<Editor: Floral Template><Title Field: \"\"><Month: Blank><Start Editing>",
+          "action": "set_text:<\"August Plan\">"
+        },
+        {
+          "state": "<Month Set><Add Goals Button><Checklist Area><Save Button>",
+          "action": "touch:<Add Goals Button>"
+        },
+        {
+          "state": "<Add Goal><Input: \"\"><Done Button>",
+          "action": "set_text:<\"Read 2 books this month\">"
+        },
+        {
+          "state": "<Goal Added><+ Add Reminder><Checklist: Empty>",
+          "action": "touch:<+ Add Reminder>"
+        },
+        {
+          "state": "<Set Reminder><Type: Monthly Check><Time: 9:00 AM><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Reminder Set><Checklist Area><+ Add Item>",
+          "action": "touch:<+ Add Item>"
+        },
+        {
+          "state": "<Add Checklist Item><Text Field: \"\"><Save Item Button>",
+          "action": "set_text:<\"Submit progress report on 20th\">"
+        },
+        {
+          "state": "<Checklist Updated><Reminder Active><Save Page Button>",
+          "action": "touch:<Save Page Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case8",
+      "steps": [
+        {
+          "state": "<Home><Sections: Notes | Sketches | Stickers><Stickers Selected><+ Add Collection>",
+          "action": "touch:<+ Add Collection>"
+        },
+        {
+          "state": "<New Collection><Title Field: \"\"><Theme Picker><Save Button>",
+          "action": "set_text:<\"Floral Elements\">"
+        },
+        {
+          "state": "<Theme: Floral><Add Images Button><Color Label: Empty>",
+          "action": "touch:<Add Images Button>"
+        },
+        {
+          "state": "<Image Picker><Files: flower1.png, leaf2.png><Select: flower1.png><Insert>",
+          "action": "touch:<Insert>"
+        },
+        {
+          "state": "<Collection Updated><+ Add Tag><Color Label: Pink><Back>",
+          "action": "touch:<+ Add Tag>"
+        },
+        {
+          "state": "<Add Tag><Text Field: \"\"><Suggested: Nature, Watercolor><Done Button>",
+          "action": "set_text:<\"Watercolor\">"
+        },
+        {
+          "state": "<Tag Added: Watercolor><Sort: Manual><Add Description>",
+          "action": "touch:<Add Description>"
+        },
+        {
+          "state": "<Description Field: \"\"><Done Button>",
+          "action": "set_text:<\"Set of botanical illustrations for journaling.\">"
+        },
+        {
+          "state": "<Collection View><Images: 1><Tag: Watercolor><Color: Pink><Search Icon>",
+          "action": "touch:<Search Icon>"
+        },
+        {
+          "state": "<Search><Search Bar: \"\"><Tag Suggestions: Watercolor><Input Field>",
+          "action": "set_text:<\"floral\">"
+        },
+        {
+          "state": "template:",
+          "action": "1. <Home Screen><Sections or Tabs: Notes | To-Dos | Calendar><+ New Entry><Search | Settings>"
+        },
+        {
+          "state": "2. <New Note><Title Field><Body Field><Add Image | Add Tags><Save Button>",
+          "action": "3. <New To-Do List><Title Field><Add Task Button><Save Button>"
+        },
+        {
+          "state": "4. <Task Entry><Input Field><Done Button><Task List Updated>",
+          "action": "5. <Note View><Title><Body><Tags><Edit | Share | Delete>"
+        },
+        {
+          "state": "6. <Reminder Setup><Time Picker><Repeat Option><Save Reminder Button>",
+          "action": "7. <Tag Manager><Suggested Tags><Selected Tags><Done or Save Button>"
+        },
+        {
+          "state": "8. <Image Picker><Gallery or Files><Select Image><Insert>",
+          "action": "9. <Voice Recorder><Mic Active><Timer><Stop | Save | Transcribe>"
+        },
+        {
+          "state": "10. <Transcription Editor><Transcript Field><Edit | Save | Discard>",
+          "action": "11. <Search Notes><Search Bar><Tag Filters><Input | Result List>"
+        },
+        {
+          "state": "12. <Filtered Results><Tag: ___><Notes List><Edit | View>",
+          "action": "13. <Note Export><Format Option: PDF | Text><Layout | Include Images><Export>"
+        },
+        {
+          "state": "14. <Share Menu><Options: Email | Link | PDF><Send | Cancel>",
+          "action": "15. <Page Editor><Title Field><Date Field><Insert Sticker | Image><Save Page>"
+        },
+        {
+          "state": "16. <Timeline Builder><Time Field><Event Field><+ Add Event><Save Timeline>",
+          "action": "17. <Checklist Manager><Add Item><Save Item><Toggle Completed>"
+        },
+        {
+          "state": "18. <Template Gallery><Available Templates><Apply Template><Start Editing>",
+          "action": "19. <Sticker Collection><Title><Theme or Color><Add Image><Save Collection>"
+        },
+        {
+          "state": "20. <Notebook Settings><Sort Options><Backup | Restore><Theme | Notifications>",
+          "action": ""
+        }
+      ]
+    }
+  ]
+}

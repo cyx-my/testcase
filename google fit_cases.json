@@ -1,0 +1,521 @@
+{
+  "app": "google fit",
+  "template": [
+    "<Home Screen><Metric Overview: Steps | Calories | Sleep><+ Add Entry><Progress Indicator>",
+    "<Activity Log><Type Selector: Walking, Running, Custom><Manual Entry Option><Save Button>",
+    "<Manual Entry><Fields: Duration, Steps, Distance><Save Button><Cancel>",
+    "<Goal Settings><Current Value><Input Field><Save Button>",
+    "<Details View><Chart | Breakdown | Summary><Back Button>",
+    "<Sleep Tracker><Time Entry: Start & End><Quality Rating><Save Button>",
+    "<Nutrition Log><Meal Selector><Search/Add Food><Calories Summary>",
+    "<Water Intake Tracker><Input: Volume><Update Button><Progress Ring>",
+    "<Vitals Home><Heart Rate | Weight | BP><Measure | Log Buttons>",
+    "<Measurement View><Input Fields><Time Selector><Save Button>",
+    "<Trends Graph><Time Range: Week, Month><Back Button><Stats Displayed>",
+    "<Medication Reminders><Current Meds | Add Reminder><Taken Indicator>",
+    "<Reminder Setup><Fields: Name, Time, Dosage><Save Button>",
+    "<Mood Tracker><Mood Selection><Energy/Notes><Save Entry>",
+    "<Workout Session><Step-by-Step Guide><Timer | Video><Next | Skip>",
+    "<Workout Summary><Calories Burned><Add Notes><Finish Button>",
+    "<Report Generator><Select Date Range><Generate | Export><Download Option>",
+    "<Settings><Preferences: Units, Notifications, Themes><Toggle/Set><Save>",
+    "<History Log><Past Records by Date><Select | View Details>",
+    "<Habit Builder><Name | Frequency><Reminder Time><Streak Info><Save>"
+  ],
+  "cases": [
+    {
+      "case_id": "case1",
+      "steps": [
+        {
+          "state": "<Home><Steps Today: 4,820><Goal: 10,000><Add Activity Button><Progress Ring>",
+          "action": "touch:<Add Activity Button>"
+        },
+        {
+          "state": "<Add Activity><Types: Walking, Running, Cycling><Manual Entry Button>",
+          "action": "touch:<Manual Entry Button>"
+        },
+        {
+          "state": "<Manual Entry><Activity: Walking><Duration Field: \"\"><Steps Field: \"\"><Save Button>",
+          "action": "set_text:<\"35 min\">"
+        },
+        {
+          "state": "<Manual Entry><Duration: 35 min><Steps Field: \"\"><Save Button>",
+          "action": "set_text:<\"3000\">"
+        },
+        {
+          "state": "<Manual Entry><Duration: 35 min><Steps: 3000><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Home><Steps Today: 7,820><Goal: 10,000><Progress Updated><Add Activity Button>",
+          "action": "touch:<Progress Ring>"
+        },
+        {
+          "state": "<Step Details><Steps by Hour Chart><Avg Pace: 5.1 km/h><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Home><Progress Ring><Add Activity Button><Set Goal Button>",
+          "action": "touch:<Set Goal Button>"
+        },
+        {
+          "state": "<Set Goal><Current Goal: 10,000><Input Field: \"\"><Save Button>",
+          "action": "set_text:<\"12,000\">"
+        },
+        {
+          "state": "<Set Goal><Updated Goal: 12,000><Save Button><Back Button>",
+          "action": "touch:<Save Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case2",
+      "steps": [
+        {
+          "state": "<Sleep Dashboard><Last Night: 6h 45m><Quality: Fair><+ Add Sleep Button>",
+          "action": "touch:<+ Add Sleep Button>"
+        },
+        {
+          "state": "<Add Sleep><Start Time Field: \"\"><End Time Field: \"\"><Save Button>",
+          "action": "set_text:<\"23:15\">"
+        },
+        {
+          "state": "<Add Sleep><Start: 23:15><End Time Field: \"\"><Save Button>",
+          "action": "set_text:<\"06:40\">"
+        },
+        {
+          "state": "<Add Sleep><End: 06:40><Duration Calculated: 7h 25m><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Sleep Dashboard><Updated: 7h 25m><Quality: Good><Sleep Graph Icon>",
+          "action": "touch:<Sleep Graph Icon>"
+        },
+        {
+          "state": "<Sleep Trend><Week Avg: 6h 58m><Deep Sleep: 2h 10m><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Sleep Dashboard><+ Add Sleep><Alarm Settings><Sleep Tips Button>",
+          "action": "touch:<Sleep Tips Button>"
+        },
+        {
+          "state": "<Sleep Tips><Tip 1: Avoid screens><Tip 2: Fixed bedtime><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Sleep Dashboard><Sleep Quality Improved><Set Goal Button>",
+          "action": "touch:<Set Goal Button>"
+        },
+        {
+          "state": "<Set Sleep Goal><Current: 8h><Input Field: \"\"><Save Button>",
+          "action": "set_text:<\"7.5\">"
+        }
+      ]
+    },
+    {
+      "case_id": "case3",
+      "steps": [
+        {
+          "state": "<Nutrition Home><Calories Today: 640 kcal><Log Meal Button><Water: 0.8L>",
+          "action": "touch:<Log Meal Button>"
+        },
+        {
+          "state": "<Log Meal><Meal Type Options: Breakfast, Lunch, Dinner><Selected: Lunch><Next Button>",
+          "action": "touch:<Next Button>"
+        },
+        {
+          "state": "<Add Food><Search Bar: \"\"><Recent: Banana, Egg><Add Custom Food Button>",
+          "action": "set_text:<\"Chicken salad\">"
+        },
+        {
+          "state": "<Search Result><Item: Chicken Salad><Calories: 320><Add Button>",
+          "action": "touch:<Add Button>"
+        },
+        {
+          "state": "<Meal Summary><Lunch: 320 kcal><Edit | Save Buttons>",
+          "action": "touch:<Save>"
+        },
+        {
+          "state": "<Nutrition Home><Updated Calories: 960 kcal><Protein: 38g><See Breakdown Button>",
+          "action": "touch:<See Breakdown Button>"
+        },
+        {
+          "state": "<Nutrition Breakdown><Carbs: 100g><Fat: 42g><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Nutrition Home><Log Meal Button><Add Water Button><Log Snack Button>",
+          "action": "touch:<Add Water Button>"
+        },
+        {
+          "state": "<Water Intake><Today: 0.8L><Add Amount Field: \"\"><Save Button>",
+          "action": "set_text:<\"0.5\">"
+        },
+        {
+          "state": "<Water Intake><Updated: 1.3L><Goal: 2.0L><Save Button>",
+          "action": "touch:<Save Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case4",
+      "steps": [
+        {
+          "state": "<Vitals Home><Heart Rate: Last Measured 74 bpm><Measure Now Button><Weight: 65.2 kg>",
+          "action": "touch:<Measure Now Button>"
+        },
+        {
+          "state": "<Measuring><Countdown: 10 sec><Cancel Button>",
+          "action": "touch:<Cancel Button>"
+        },
+        {
+          "state": "<Vitals Home><Heart Rate: 74 bpm><Measure Again Button><Log Weight Button>",
+          "action": "touch:<Log Weight Button>"
+        },
+        {
+          "state": "<Log Weight><Current: 65.2><Input Field: \"\"><Save Button>",
+          "action": "set_text:<\"64.7\">"
+        },
+        {
+          "state": "<Log Weight><New Entry: 64.7><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Vitals Home><Weight Updated: 64.7><Trend Graph Icon>",
+          "action": "touch:<Trend Graph Icon>"
+        },
+        {
+          "state": "<Weight Trend><Week Avg: 65.1><Goal: 62.0><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Vitals Home><Heart Rate & Weight Shown><Vitals Settings Icon>",
+          "action": "touch:<Vitals Settings Icon>"
+        },
+        {
+          "state": "<Vitals Settings><Units: kg><Reminders: ON><Target Weight Field: \"\">",
+          "action": "set_text:<\"62.0\">"
+        },
+        {
+          "state": "<Vitals Settings><Target Updated: 62.0><Save Button>",
+          "action": "touch:<Save Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case5",
+      "steps": [
+        {
+          "state": "<Medication Home><Today’s Meds: 1/3 Taken><+ Add Reminder Button><History Tab>",
+          "action": "touch:<+ Add Reminder Button>"
+        },
+        {
+          "state": "<Add Reminder><Medicine Name Field: \"\"><Time Picker><Dosage Field><Save Button>",
+          "action": "set_text:<\"Vitamin D\">"
+        },
+        {
+          "state": "<Add Reminder><Name: Vitamin D><Time: 08:00 AM><Dosage: 1 tablet><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Medication Home><Reminders: 3><Next: 08:00 AM><Mark Taken Button>",
+          "action": "touch:<Mark Taken Button>"
+        },
+        {
+          "state": "<Confirmation><Vitamin D marked as taken><Taken Today: 2/3><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Medication Home><Taken: 2/3><Missed: 0><Notes Button>",
+          "action": "touch:<Notes Button>"
+        },
+        {
+          "state": "<Notes><Date: Today><Add Entry Field: \"\"><Save Button>",
+          "action": "set_text:<\"Felt a bit dizzy after breakfast. Will monitor.\">"
+        },
+        {
+          "state": "<Notes><New Entry Added><Back Button><Edit Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Medication Home><Notes Added><History Tab><+ Add Reminder Button>",
+          "action": "touch:<History Tab>"
+        },
+        {
+          "state": "<Medication History><Past 7 Days><Taken %: 90%><Back Button>",
+          "action": "touch:<Back Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case6",
+      "steps": [
+        {
+          "state": "<Mood Tracker><Today’s Mood: Not Set><+ Add Entry><History | Graph | Journal>",
+          "action": "touch:<+ Add Entry>"
+        },
+        {
+          "state": "<New Mood Entry><Mood Options: Happy, Anxious, Tired, Focused><Selected: Happy><Next Button>",
+          "action": "touch:<Next Button>"
+        },
+        {
+          "state": "<Mood Details><Energy Level Slider: 70%><Add Note Button><Save Button>",
+          "action": "touch:<Add Note Button>"
+        },
+        {
+          "state": "<Add Note><Text Field: \"\"><Back Button><Done Button>",
+          "action": "set_text:<\"Had a productive morning, feeling good.\">"
+        },
+        {
+          "state": "<Add Note><Note Added><Back Button><Done Button>",
+          "action": "touch:<Done Button>"
+        },
+        {
+          "state": "<Mood Details><Note Saved><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Mood Tracker><Today’s Mood: Happy><Journal Entry: Present><Graph Icon>",
+          "action": "touch:<Graph Icon>"
+        },
+        {
+          "state": "<Mood Graph><Week Overview: 3x Happy, 2x Tired, 1x Anxious><Trend Arrow: Up>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Mood Tracker><+ Add Entry><Edit Entry><Share Button>",
+          "action": "touch:<Share Button>"
+        },
+        {
+          "state": "<Share Mood><Options: Export PDF, Send to Therapist><Cancel Button>",
+          "action": "touch:<Export PDF>"
+        }
+      ]
+    },
+    {
+      "case_id": "case7",
+      "steps": [
+        {
+          "state": "<Fitness Home><Workout Today: None><Start New Workout Button><Goals | History | Calendar>",
+          "action": "touch:<Start New Workout Button>"
+        },
+        {
+          "state": "<Workout Categories><Cardio, Strength, Stretching, HIIT><Selected: Strength><Next Button>",
+          "action": "touch:<Strength>"
+        },
+        {
+          "state": "<Strength Workouts><Beginner Full Body, Core Focus><Selected: Beginner Full Body><Start Button>",
+          "action": "touch:<Start Button>"
+        },
+        {
+          "state": "<Workout Started><Step 1: Jumping Jacks - 30 sec><Next Button><Pause Button>",
+          "action": "touch:<Next Button>"
+        },
+        {
+          "state": "<Step 2: Bodyweight Squats><Instruction Video><Timer: 30 sec>",
+          "action": "touch:<Next Button>"
+        },
+        {
+          "state": "<Step 3: Push-ups><Next Button><Skip Button>",
+          "action": "touch:<Skip Button>"
+        },
+        {
+          "state": "<Step Skipped><Step 4: Plank - 1 min><Start Timer><Back Button>",
+          "action": "touch:<Start Timer>"
+        },
+        {
+          "state": "<Plank Running><Timer: 45 sec left><Pause Button><Finish Button>",
+          "action": "touch:<Finish Button>"
+        },
+        {
+          "state": "<Workout Summary><Duration: 7 min><Calories Burned: 45><Add Notes Button>",
+          "action": "touch:<Add Notes Button>"
+        },
+        {
+          "state": "<Add Notes><Text Field: \"\"><Done Button>",
+          "action": "set_text:<\"Felt good. Will increase intensity tomorrow.\">"
+        }
+      ]
+    },
+    {
+      "case_id": "case8",
+      "steps": [
+        {
+          "state": "<Health Summary><Last Week Report><Heart Rate | Sleep | Activity><Generate New Report Button>",
+          "action": "touch:<Generate New Report Button>"
+        },
+        {
+          "state": "<Generate Report><Date Range: Last 7 Days><Include: Sleep + Heart Rate + Steps><Generate Button>",
+          "action": "touch:<Generate Button>"
+        },
+        {
+          "state": "<Report Generated><Summary: Complete><Download PDF Button><Send Button>",
+          "action": "touch:<Download PDF Button>"
+        },
+        {
+          "state": "<PDF Exported><Location: Downloads/health_report.pdf><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Health Summary><View Reports><History Button><Insights Tab>",
+          "action": "touch:<History Button>"
+        },
+        {
+          "state": "<Report History><Reports: June 21, June 14, June 7><Selected: June 21><View Button>",
+          "action": "touch:<View Button>"
+        },
+        {
+          "state": "<Report View><Heart Rate Avg: 72 bpm><Sleep Avg: 6.9 h><Steps Avg: 8,240>",
+          "action": "touch:<Insights Tab>"
+        },
+        {
+          "state": "<Health Insights><Sleep Improved +12%><Heart Rate Stable><Activity: Below Goal>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Health Summary><Notifications: 1 New><+ Add Data><Settings>",
+          "action": "touch:<Settings>"
+        },
+        {
+          "state": "<Settings><Auto Reports: ON><Export Format: PDF><Set Weekly Reminder Button>",
+          "action": "touch:<Set Weekly Reminder Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case9",
+      "steps": [
+        {
+          "state": "<Vitals Home><Last Blood Pressure: Not Recorded><Add BP Button><History | Graph | Settings>",
+          "action": "touch:<Add BP Button>"
+        },
+        {
+          "state": "<Add Blood Pressure><Systolic Field: \"\"><Diastolic Field: \"\"><Time: Now><Save Button>",
+          "action": "set_text:<\"120\">"
+        },
+        {
+          "state": "<Add Blood Pressure><Systolic: 120><Diastolic Field: \"\"><Time: Now><Save Button>",
+          "action": "set_text:<\"78\">"
+        },
+        {
+          "state": "<Add Blood Pressure><Systolic: 120><Diastolic: 78><Time: Now><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Vitals Home><Last BP: 120/78 mmHg><Status: Normal><Graph Icon>",
+          "action": "touch:<Graph Icon>"
+        },
+        {
+          "state": "<BP Trend><This Week: Avg 122/79><Target Range: 90–120/60–80><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Vitals Home><Graph | History><Reminder Icon>",
+          "action": "touch:<Reminder Icon>"
+        },
+        {
+          "state": "<Reminders><Blood Pressure: Daily at 8:00 AM><+ Add Reminder Button>",
+          "action": "touch:<+ Add Reminder Button>"
+        },
+        {
+          "state": "<New Reminder><Label: \"\"><Time Picker><Repeat: Daily><Save Button>",
+          "action": "set_text:<\"Morning BP\">"
+        },
+        {
+          "state": "<New Reminder><Label: Morning BP><Time: 08:00 AM><Save Button>",
+          "action": "touch:<Save Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "case10",
+      "steps": [
+        {
+          "state": "<Wellness Dashboard><Habits: None Active><+ Create Habit Button><Calendar | Stats>",
+          "action": "touch:<+ Create Habit Button>"
+        },
+        {
+          "state": "<New Habit><Name Field: \"\"><Icon Picker><Frequency: Daily><Save Button>",
+          "action": "set_text:<\"Drink 2L Water\">"
+        },
+        {
+          "state": "<New Habit><Name: Drink 2L Water><Frequency: Daily><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Wellness Dashboard><Habit Created><Status: Not Done Today><Mark Done Button>",
+          "action": "touch:<Mark Done Button>"
+        },
+        {
+          "state": "<Confirmation><\"Drink 2L Water\" marked as done><Back to Dashboard Button>",
+          "action": "touch:<Back to Dashboard Button>"
+        },
+        {
+          "state": "<Wellness Dashboard><1/1 Done Today><Streak: 1 day><View History Button>",
+          "action": "touch:<View History Button>"
+        },
+        {
+          "state": "<Habit History><Dates Completed: Jul 5><Streak: Active><Edit Habit Button>",
+          "action": "touch:<Edit Habit Button>"
+        },
+        {
+          "state": "<Edit Habit><Reminder: Off><Icon: Water><Delete Button><Toggle Reminder Button>",
+          "action": "touch:<Toggle Reminder Button>"
+        },
+        {
+          "state": "<Reminder On><Time Picker: 12:00 PM><Save Button><Back Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Wellness Dashboard><Reminder Set: 12:00 PM><Habit Active><Mark Done Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "template:",
+          "action": "1. <Home Screen><Metric Overview: Steps | Calories | Sleep><+ Add Entry><Progress Indicator>"
+        },
+        {
+          "state": "2. <Activity Log><Type Selector: Walking, Running, Custom><Manual Entry Option><Save Button>",
+          "action": "3. <Manual Entry><Fields: Duration, Steps, Distance><Save Button><Cancel>"
+        },
+        {
+          "state": "4. <Goal Settings><Current Value><Input Field><Save Button>",
+          "action": "5. <Details View><Chart | Breakdown | Summary><Back Button>"
+        },
+        {
+          "state": "6. <Sleep Tracker><Time Entry: Start & End><Quality Rating><Save Button>",
+          "action": "7. <Nutrition Log><Meal Selector><Search/Add Food><Calories Summary>"
+        },
+        {
+          "state": "8. <Water Intake Tracker><Input: Volume><Update Button><Progress Ring>",
+          "action": "9. <Vitals Home><Heart Rate | Weight | BP><Measure | Log Buttons>"
+        },
+        {
+          "state": "10. <Measurement View><Input Fields><Time Selector><Save Button>",
+          "action": "11. <Trends Graph><Time Range: Week, Month><Back Button><Stats Displayed>"
+        },
+        {
+          "state": "12. <Medication Reminders><Current Meds | Add Reminder><Taken Indicator>",
+          "action": "13. <Reminder Setup><Fields: Name, Time, Dosage><Save Button>"
+        },
+        {
+          "state": "14. <Mood Tracker><Mood Selection><Energy/Notes><Save Entry>",
+          "action": "15. <Workout Session><Step-by-Step Guide><Timer | Video><Next | Skip>"
+        },
+        {
+          "state": "16. <Workout Summary><Calories Burned><Add Notes><Finish Button>",
+          "action": "17. <Report Generator><Select Date Range><Generate | Export><Download Option>"
+        },
+        {
+          "state": "18. <Settings><Preferences: Units, Notifications, Themes><Toggle/Set><Save>",
+          "action": "19. <History Log><Past Records by Date><Select | View Details>"
+        },
+        {
+          "state": "20. <Habit Builder><Name | Frequency><Reminder Time><Streak Info><Save>",
+          "action": ""
+        }
+      ]
+    }
+  ]
+}

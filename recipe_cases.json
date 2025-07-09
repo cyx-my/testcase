@@ -1,0 +1,221 @@
+{
+  "app": "recipe",
+  "template": [
+    "<Home><Tabs: Explore | Favorites | Search><Active Tab: ___><Recipe Highlights>",
+    "<Explore Recipes><Recipe Cards List><Scroll | Select Recipe><Filter Option>",
+    "<Recipe View><Prep Time><Difficulty><Save | Start Cooking | Share>",
+    "<Step-by-Step Mode><Step X of Y><Instruction Text><Next | Back | Timer>",
+    "<Favorites><Saved Recipes List><Select Recipe><Filter | Sort>",
+    "<Note Interface><Add | Edit Note><Text Field><Save | Cancel>",
+    "<Adjust Servings><Input Field><Confirm Button><Ingredients Auto-Scaled>",
+    "<Shopping List><Items: ___><Sort Option><Checkboxes><Back>",
+    "<Share Options><Copy Link | Export | Email><Toast or Confirmation>",
+    "<Tags and Sorting><Add Tag><Save><Apply Sort><Sorted View>"
+  ],
+  "cases": [
+    {
+      "case_id": "case1",
+      "steps": [
+        {
+          "state": "<Home><Tabs: Explore | Favorites | Search><Explore Selected><Top Picks: 5>",
+          "action": "touch:<Explore>"
+        },
+        {
+          "state": "<Explore Recipes><Cards: \"Lemon Chicken\", \"Vegan Bowl\"><Scroll><Select: Lemon Chicken>",
+          "action": "touch:<Lemon Chicken>"
+        },
+        {
+          "state": "<Recipe View: Lemon Chicken><Prep Time: 30 min><Difficulty: Easy><Heart Icon><Start Cooking>",
+          "action": "touch:<Heart Icon>"
+        },
+        {
+          "state": "<Recipe Favorited><Heart Icon: Filled><Back | Start Cooking>",
+          "action": "touch:<Back>"
+        },
+        {
+          "state": "<Explore Recipes><Updated Favorites><Search Icon><Filter: Cuisine>",
+          "action": "touch:<Filter>"
+        },
+        {
+          "state": "<Filter Menu><Options: Italian, Asian, Vegan><Selected: Asian><Apply>",
+          "action": "touch:<Asian>"
+        },
+        {
+          "state": "<Explore Recipes><Filtered by: Asian><Cards: 3><Select: \"Tofu Stir Fry\">",
+          "action": "touch:<Tofu Stir Fry>"
+        },
+        {
+          "state": "<Recipe View: Tofu Stir Fry><Save to Favorites><Start Cooking>",
+          "action": "touch:<Start Cooking>"
+        },
+        {
+          "state": "<Step-by-Step Mode><Step 1: Prep ingredients><Next Button><Back Button>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Step 2: Heat Oil><Timer Option: 2 min><Next Button>",
+          "action": "touch:<Timer Option>"
+        }
+      ]
+    },
+    {
+      "case_id": "case2",
+      "steps": [
+        {
+          "state": "<Favorites><Saved: Lemon Chicken, Tofu Stir Fry><Select: Lemon Chicken>",
+          "action": "touch:<Lemon Chicken>"
+        },
+        {
+          "state": "<Recipe Detail><Prep: 30min><Add Note Button><Start Button>",
+          "action": "touch:<Add Note Button>"
+        },
+        {
+          "state": "<Add Note><Text Field: \"\"><Save Note Button>",
+          "action": "set_text:<\"Reduce salt by half next time.\">"
+        },
+        {
+          "state": "<Note Saved><Note Visible><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Favorites><Lemon Chicken: Note Added><Filter><Search>",
+          "action": "touch:<Filter>"
+        },
+        {
+          "state": "<Filter Favorites><Filter by: Has Notes><Apply>",
+          "action": "touch:<Apply>"
+        },
+        {
+          "state": "<Filtered Results><Recipes: 1><Select: Lemon Chicken>",
+          "action": "touch:<Lemon Chicken>"
+        },
+        {
+          "state": "<Recipe View><Edit Note><Start Cooking><Share>",
+          "action": "touch:<Edit Note>"
+        },
+        {
+          "state": "<Edit Note><Current: \"Reduce salt...\"><Save>",
+          "action": "set_text:<\"Try using low-sodium soy sauce.\">"
+        },
+        {
+          "state": "<Note Updated><Back to Recipe><Note: Edited>",
+          "action": "touch:<Back to Recipe>"
+        }
+      ]
+    },
+    {
+      "case_id": "case3",
+      "steps": [
+        {
+          "state": "<Recipe View: Pasta Bake><Serves: 2><Adjust Portion><Add to List Button>",
+          "action": "touch:<Adjust Portion>"
+        },
+        {
+          "state": "<Adjust Servings><Input: 4><Confirm Button>",
+          "action": "set_text:<\"4\">"
+        },
+        {
+          "state": "<Portion Updated><Ingredients Scaled><Add to List Button>",
+          "action": "touch:<Add to List Button>"
+        },
+        {
+          "state": "<Add to Shopping List><Selected: All><Save Button>",
+          "action": "touch:<Save Button>"
+        },
+        {
+          "state": "<Shopping List><Items: 9><Sort by A-Z | Category><Back Button>",
+          "action": "touch:<Sort by Category>"
+        },
+        {
+          "state": "<Shopping List><Sorted: Dairy, Produce, Grains><Checkboxes: Empty>",
+          "action": "touch:<Checkbox: Milk>"
+        },
+        {
+          "state": "<Item Checked: Milk><Remaining: 8><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Recipe View><Portion: 4><Shopping List Linked><Cook Mode>",
+          "action": "touch:<Cook Mode>"
+        },
+        {
+          "state": "<Cook Mode><Step 1: Preheat oven><Next Step Button><Timer>",
+          "action": "touch:<Next Step Button>"
+        },
+        {
+          "state": "<Step 2: Mix ingredients><Checklist: 3 items><Next>",
+          "action": "touch:<Checklist: Eggs>"
+        }
+      ]
+    },
+    {
+      "case_id": "case4",
+      "steps": [
+        {
+          "state": "<Favorites><Recipes: 4><Select: \"Avocado Toast\">",
+          "action": "touch:<Avocado Toast>"
+        },
+        {
+          "state": "<Recipe View><Prep Time: 5 min><Share Button><Start Cooking>",
+          "action": "touch:<Share Button>"
+        },
+        {
+          "state": "<Share Options><Copy Link | Send via Email | Export as PDF><Selected: Copy Link>",
+          "action": "touch:<Copy Link>"
+        },
+        {
+          "state": "<Link Copied><Toast: \"Link copied to clipboard\"><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Recipe View><Back><Heart: Active><Start Cooking>",
+          "action": "touch:<Back>"
+        },
+        {
+          "state": "<Favorites><Avocado Toast Shared><Edit Tag Button><Sort>",
+          "action": "touch:<Edit Tag Button>"
+        },
+        {
+          "state": "<Edit Tags><Add New Tag><Suggested: Breakfast><Save>",
+          "action": "set_text:<\"Quick Meals\">"
+        },
+        {
+          "state": "<Tag Saved><Recipe Updated><Sort Button>",
+          "action": "touch:<Sort Button>"
+        },
+        {
+          "state": "<Sort Favorites><By: Recently Added | Alphabetical><Selected: Recently Added>",
+          "action": "touch:<Alphabetical>"
+        },
+        {
+          "state": "<Sorted Favorites><First: Avocado Toast><Second: Vegan Bowl><Search>",
+          "action": "touch:<Search>"
+        },
+        {
+          "state": "template:",
+          "action": "1. <Home><Tabs: Explore | Favorites | Search><Active Tab: ___><Recipe Highlights>"
+        },
+        {
+          "state": "2. <Explore Recipes><Recipe Cards List><Scroll | Select Recipe><Filter Option>",
+          "action": "3. <Recipe View><Prep Time><Difficulty><Save | Start Cooking | Share>"
+        },
+        {
+          "state": "4. <Step-by-Step Mode><Step X of Y><Instruction Text><Next | Back | Timer>",
+          "action": "5. <Favorites><Saved Recipes List><Select Recipe><Filter | Sort>"
+        },
+        {
+          "state": "6. <Note Interface><Add | Edit Note><Text Field><Save | Cancel>",
+          "action": "7. <Adjust Servings><Input Field><Confirm Button><Ingredients Auto-Scaled>"
+        },
+        {
+          "state": "8. <Shopping List><Items: ___><Sort Option><Checkboxes><Back>",
+          "action": "9. <Share Options><Copy Link | Export | Email><Toast or Confirmation>"
+        },
+        {
+          "state": "10. <Tags and Sorting><Add Tag><Save><Apply Sort><Sorted View>",
+          "action": ""
+        }
+      ]
+    }
+  ]
+}

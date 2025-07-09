@@ -1,0 +1,521 @@
+{
+  "app": "duolinguo",
+  "template": [
+    "<Dashboard><Daily XP: ___><Streak: ___><Check-in Button>",
+    "<Check-in Confirmed><Streak Updated><Reward Granted><Continue Button>",
+    "<Lesson Suggestion Screen><Topic: ___><Start Button>",
+    "<Lesson Start><Question Type: ___><Input or Options><Submit or Hint>",
+    "<Question Result><Feedback: Correct | Incorrect><Progress: __/__><Next>",
+    "<Lesson Complete><XP Earned><Streak Status><Celebrate | Continue>",
+    "<Leaderboard View><Rank: ___><Tabs: Friends | Global><Challenge Button>",
+    "<Challenge Screen><Mode Selection><Invite Button | Pending Status>",
+    "<Challenge Progress><User Score vs Opponent><Practice or Continue>",
+    "<Review Tab><Score %><Reminder: On | Off><Set or Edit Reminder>",
+    "<Reminder Setup><Repeat Option><Time Input><Save Button>",
+    "<Grammar Test><Question: ___><Input Type><Submit | Next>",
+    "<Grammar Result><Score><Level Unlocked><Badge or Continue>",
+    "<Settings><Offline Mode: On | Off><Download Courses Option>",
+    "<Download Screen><Course List><Download Status><Back>",
+    "<Welcome Setup><Language Selection><Goal Setting><Path Choice>",
+    "<Speaking Practice><Word Prompt><Mic Input><Score + Feedback>",
+    "<Mistake Review><User Answer vs Correct Answer><Retry or Hint>",
+    "<Mini Badge or Achievement><Unlocked Item><Continue>",
+    "<Lesson Wrap-Up><Accuracy | Progress><Options: Share | Back>"
+  ],
+  "cases": [
+    {
+      "case_id": "case1",
+      "steps": [
+        {
+          "state": "<Dashboard><Daily XP: 0/10><Streak: 2 Days><Check-in Button>",
+          "action": "touch:<Check-in Button>"
+        },
+        {
+          "state": "<Check-in Confirmed><+1 Streak><Reward: 5 Gems><Continue>",
+          "action": "touch:<Continue>"
+        },
+        {
+          "state": "<Dashboard><Streak: 3 Days><XP Needed: 10><Lesson Suggestion>",
+          "action": "touch:<Lesson Suggestion>"
+        },
+        {
+          "state": "<Lesson: Food><Start Button><Topic: Breakfast>",
+          "action": "touch:<Start Button>"
+        },
+        {
+          "state": "<Q1><Translate: \"Eggs\"><Text Field: \"\"><Submit>",
+          "action": "set_text:<\"Huevos\">"
+        },
+        {
+          "state": "<Correct><Next Question><Progress: 1/5>",
+          "action": "touch:<Next Question>"
+        },
+        {
+          "state": "<Q2><Choose image for \"Leche\"><Options: 🧃🥛🍺>",
+          "action": "touch:<🥛>"
+        },
+        {
+          "state": "<Correct><XP: +10><Lesson Complete>",
+          "action": "touch:<Lesson Complete>"
+        },
+        {
+          "state": "<Streak Update><Today: Completed><Streak: 3 Days><Celebrate Button>",
+          "action": "touch:<Celebrate Button>"
+        },
+        {
+          "state": "<Celebration Screen><Badge: 3-Day Streak><Share | Back>",
+          "action": "touch:<Back>"
+        }
+      ]
+    },
+    {
+      "case_id": "case2",
+      "steps": [
+        {
+          "state": "<Dashboard><XP: 120><Leaderboard: Bronze League><View Button>",
+          "action": "touch:<View Button>"
+        },
+        {
+          "state": "<Leaderboard><Your Rank: #8><Friends Tab | Global Tab><Invite Button>",
+          "action": "touch:<Invite Button>"
+        },
+        {
+          "state": "<Invite Friends><Options: Code | Contacts><Send Code>",
+          "action": "touch:<Send Code>"
+        },
+        {
+          "state": "<Code Shared><Copy Success><Back>",
+          "action": "touch:<Back>"
+        },
+        {
+          "state": "<Leaderboard><Tab: Friends><Friend: Anna (#5)><Challenge>",
+          "action": "touch:<Challenge>"
+        },
+        {
+          "state": "<Challenge Settings><Mode: XP Race (1 Day)><Send Invite>",
+          "action": "touch:<Send Invite>"
+        },
+        {
+          "state": "<Challenge Sent><Status: Pending><Back to Home>",
+          "action": "touch:<Back to Home>"
+        },
+        {
+          "state": "<Dashboard><Challenges: 1 Active><View Challenge>",
+          "action": "touch:<View Challenge>"
+        },
+        {
+          "state": "<Challenge Screen><You: 20 XP | Anna: 30 XP><Practice Button>",
+          "action": "touch:<Practice Button>"
+        },
+        {
+          "state": "<Lesson Start><Topic: Colors><XP: Boost Active><Begin>",
+          "action": "touch:<Begin>"
+        }
+      ]
+    },
+    {
+      "case_id": "case3",
+      "steps": [
+        {
+          "state": "<Review Tab><Review Score: 62%><Reminder: Off><Set Reminder Button>",
+          "action": "touch:<Set Reminder Button>"
+        },
+        {
+          "state": "<Reminder Setup><Repeat: Daily><Time: 7:00 PM><Save Button>",
+          "action": "set_text:<\"19:00\">"
+        },
+        {
+          "state": "<Reminder Saved><Next Review: Today 7:00 PM><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Review Tab><Reminder Active><Start Review Now>",
+          "action": "touch:<Start Review Now>"
+        },
+        {
+          "state": "<Review Q1><Word: \"Amigo\"><Select Translation><Choices: Friend | Brother>",
+          "action": "touch:<Friend>"
+        },
+        {
+          "state": "<Correct><Progress: 1/5><Next>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Review Q2><Fill: \"I ___ coffee\"><Text Field: \"\"><Hint>",
+          "action": "set_text:<\"drink\">"
+        },
+        {
+          "state": "<Correct><Review Complete><Score Updated: 68%>",
+          "action": "touch:<Continue>"
+        },
+        {
+          "state": "<Summary><Schedule: Daily at 19:00><Snooze | Change>",
+          "action": "touch:<Change>"
+        },
+        {
+          "state": "<Edit Reminder><New Time: 21:00><Save>",
+          "action": "set_text:<\"21:00\">"
+        }
+      ]
+    },
+    {
+      "case_id": "case4",
+      "steps": [
+        {
+          "state": "<Settings><Offline Mode: Off><Download Courses Button>",
+          "action": "touch:<Download Courses Button>"
+        },
+        {
+          "state": "<Download Menu><Available: Spanish, French><Selected: Spanish><Download Button>",
+          "action": "touch:<Download>"
+        },
+        {
+          "state": "<Downloading><Progress: 0% → 100%><Estimated Time: 2 min>",
+          "action": "touch:<Wait>"
+        },
+        {
+          "state": "<Download Complete><Offline Mode: Ready><Back Button>",
+          "action": "touch:<Back Button>"
+        },
+        {
+          "state": "<Lesson Library><Downloaded: Basics 1, Food 1><Select: Food 1>",
+          "action": "touch:<Food 1>"
+        },
+        {
+          "state": "<Lesson Start><Mode: Offline><XP Eligible><Begin>",
+          "action": "touch:<Begin>"
+        },
+        {
+          "state": "<Q1><Translate: \"Bread\"><Text Field: \"\"><Hint>",
+          "action": "set_text:<\"Pan\">"
+        },
+        {
+          "state": "<Correct><Next><Progress: 1/5>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Lesson Complete><XP Earned: 10><Sync Pending>",
+          "action": "touch:<Back>"
+        },
+        {
+          "state": "<Dashboard><Offline XP: 10><Sync when Online><Reminder Set>",
+          "action": "touch:<Reminder Set>"
+        }
+      ]
+    },
+    {
+      "case_id": "case5",
+      "steps": [
+        {
+          "state": "<Grammar Tab><Level: A1><Take Test Button><Status: Not Started>",
+          "action": "touch:<Take Test Button>"
+        },
+        {
+          "state": "<Test Q1><Identify tense in: \"He was eating\"><Choices: Past | Present | Future>",
+          "action": "touch:<Past>"
+        },
+        {
+          "state": "<Correct><Q2><Fill the blank><\"She ___ to school\"><Field>",
+          "action": "set_text:<\"goes\">"
+        },
+        {
+          "state": "<Correct><Q3><True/False: \"They has gone\"><Selected: False>",
+          "action": "touch:<False>"
+        },
+        {
+          "state": "<Progress: 3/10><Next Question Button>",
+          "action": "touch:<Next Question Button>"
+        },
+        {
+          "state": "<Q4><Reorder words: \"yesterday / I / studied\"><Drag Interface>",
+          "action": "touch:<\"I studied yesterday\">"
+        },
+        {
+          "state": "<Correct><Next><XP Earned: +15>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Test Complete><Score: 9/10><Level: A2 Unlocked><Claim Badge>",
+          "action": "touch:<Claim Badge>"
+        },
+        {
+          "state": "<Badge: Grammar A2><Share Option><Done Button>",
+          "action": "touch:<Done Button>"
+        },
+        {
+          "state": "<Grammar Tab><Level: A2><Tests Available: Passive Voice><Start New Test>",
+          "action": "touch:<Start New Test>"
+        }
+      ]
+    },
+    {
+      "case_id": "case6",
+      "steps": [
+        {
+          "state": "<Welcome Screen><Languages: English | Spanish | Korean><Start Learning>",
+          "action": "touch:<Spanish>"
+        },
+        {
+          "state": "<Set Your Goal><Options: Casual (5 min) | Serious (20 min)><Next>",
+          "action": "touch:<Casual>"
+        },
+        {
+          "state": "<Learning Path><Options: Beginner | Placement Test><Start Button>",
+          "action": "touch:<Beginner>"
+        },
+        {
+          "state": "<Lesson 1><Intro: \"Hola means Hello\"><Next Button>",
+          "action": "touch:<Next Button>"
+        },
+        {
+          "state": "<Lesson 1.2><Translate: \"Hello\"><Text Field: \"\"><Submit>",
+          "action": "set_text:<\"Hola\">"
+        },
+        {
+          "state": "<Correct><XP +10><Next>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Congrats><Lesson Complete><Streak: 1 Day><Continue>",
+          "action": "touch:<Continue>"
+        },
+        {
+          "state": "<Dashboard><Language: Spanish><Today: Done><Practice Button>",
+          "action": "touch:<Practice Button>"
+        },
+        {
+          "state": "<Review Mode><Question 1/5><Word Match><Next>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Daily Goal Tracker><XP: 10/10><Goal Reached><Back>",
+          "action": "touch:<Back>"
+        }
+      ]
+    },
+    {
+      "case_id": "case7",
+      "steps": [
+        {
+          "state": "<Dashboard><Current Path: Beginner><Switch Path Button>",
+          "action": "touch:<Switch Path Button>"
+        },
+        {
+          "state": "<Path Options><Placement Test | Business Spanish | Travel Spanish>",
+          "action": "touch:<Travel Spanish>"
+        },
+        {
+          "state": "<Confirm Switch><Old Progress: 20%><New Path: 0%><Confirm>",
+          "action": "touch:<Confirm>"
+        },
+        {
+          "state": "<Lesson 1: Travel><Topic: Airport><Start Lesson>",
+          "action": "touch:<Start Lesson>"
+        },
+        {
+          "state": "<Q1><Translate: \"Passport\"><Text Field: \"\"><Hint Button>",
+          "action": "set_text:<\"Pasaporte\">"
+        },
+        {
+          "state": "<Correct><Next><+10 XP>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Q2><Choose image: \"Suitcase\"><Options: 🎒🧳📦>",
+          "action": "touch:<🧳>"
+        },
+        {
+          "state": "<Correct><Progress: 2/5><Next>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Lesson Complete><Topic: Airport><Back to Path>",
+          "action": "touch:<Back to Path>"
+        },
+        {
+          "state": "<Travel Spanish Path><Airport: Done><Next: Hotel><Start>",
+          "action": "touch:<Start>"
+        }
+      ]
+    },
+    {
+      "case_id": "case8",
+      "steps": [
+        {
+          "state": "<Lesson 3><Type: Listening><Audio: Play Button><Answer Field>",
+          "action": "touch:<Play Button>"
+        },
+        {
+          "state": "<Audio Playing><Language: Spanish><Input Visible>",
+          "action": "set_text:<\"Buenos días\">"
+        },
+        {
+          "state": "<Correct><+10 XP><Next>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Next Listening><Play Icon><Answer Box>",
+          "action": "touch:<Play Icon>"
+        },
+        {
+          "state": "<Typing Mode><Text Field: \"\"><Hint Button>",
+          "action": "set_text:<\"Gracias\">"
+        },
+        {
+          "state": "<Correct><XP Updated><Progress: 3/5><Next>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Mini Badge><Listening Master: Unlocked><Continue>",
+          "action": "touch:<Continue>"
+        },
+        {
+          "state": "<Review Audio><Replay Option><Transcript Hidden>",
+          "action": "touch:<Replay>"
+        },
+        {
+          "state": "<Audio Replayed><Back Button><Next>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Lesson Wrap-up><Summary><Accuracy: 100%><Back>",
+          "action": "touch:<Back>"
+        }
+      ]
+    },
+    {
+      "case_id": "case9",
+      "steps": [
+        {
+          "state": "<Speaking Practice><Word: \"Biblioteca\"><Mic Icon><Try Now>",
+          "action": "touch:<Mic Icon>"
+        },
+        {
+          "state": "<Recording><Voice Detected><Stop Icon Active>",
+          "action": "touch:<Stop Icon>"
+        },
+        {
+          "state": "<Processing><Analyzing Pronunciation><Feedback Incoming>",
+          "action": "touch:<Wait>"
+        },
+        {
+          "state": "<Result><Score: 85%><Tip: \"Stress on second syllable\"><Retry>",
+          "action": "touch:<Retry>"
+        },
+        {
+          "state": "<Mic Active><Word: Biblioteca><Listening>",
+          "action": "touch:<Stop Icon>"
+        },
+        {
+          "state": "<Feedback><Score: 95%><Well done!><Continue>",
+          "action": "touch:<Continue>"
+        },
+        {
+          "state": "<Lesson Continue><Speaking Score Saved><Next Word>",
+          "action": "touch:<Next Word>"
+        },
+        {
+          "state": "<New Word: Restaurante><Mic Icon>",
+          "action": "touch:<Mic Icon>"
+        },
+        {
+          "state": "<Recording><Timer Active><Cancel>",
+          "action": "touch:<Cancel>"
+        },
+        {
+          "state": "<Speak Later Prompt><Skip Speaking for now><Return to Lesson>",
+          "action": "touch:<Return to Lesson>"
+        }
+      ]
+    },
+    {
+      "case_id": "case10",
+      "steps": [
+        {
+          "state": "<Dashboard><Recent Mistakes: 3><Review Mistakes Button>",
+          "action": "touch:<Review Mistakes Button>"
+        },
+        {
+          "state": "<Mistake 1><Your Answer: \"comer\"><Correct: \"beber\"><Try Again>",
+          "action": "set_text:<\"beber\">"
+        },
+        {
+          "state": "<Correct><Next Mistake>",
+          "action": "touch:<Next Mistake>"
+        },
+        {
+          "state": "<Mistake 2><Pick Image: \"cheese\"><Selected: 🥩❌><Retry>",
+          "action": "touch:<🧀>"
+        },
+        {
+          "state": "<Correct><Explanation: Queso = Cheese><Next>",
+          "action": "touch:<Next>"
+        },
+        {
+          "state": "<Mistake 3><Fill in the blank: \"Yo ___ pan\"><Field><Hint>",
+          "action": "set_text:<\"como\">"
+        },
+        {
+          "state": "<Correct><Mistake Review Complete><Continue>",
+          "action": "touch:<Continue>"
+        },
+        {
+          "state": "<Review Summary><Accuracy Improved: +30%><Save Progress>",
+          "action": "touch:<Save Progress>"
+        },
+        {
+          "state": "<Custom Practice Mode><Add: Beber, Queso><Confirm>",
+          "action": "touch:<Confirm>"
+        },
+        {
+          "state": "<Review Mode Ready><Start Practice><Exit>",
+          "action": "touch:<Start Practice>"
+        },
+        {
+          "state": "template:",
+          "action": "1. <Dashboard><Daily XP: ___><Streak: ___><Check-in Button>"
+        },
+        {
+          "state": "2. <Check-in Confirmed><Streak Updated><Reward Granted><Continue Button>",
+          "action": "3. <Lesson Suggestion Screen><Topic: ___><Start Button>"
+        },
+        {
+          "state": "4. <Lesson Start><Question Type: ___><Input or Options><Submit or Hint>",
+          "action": "5. <Question Result><Feedback: Correct | Incorrect><Progress: __/__><Next>"
+        },
+        {
+          "state": "6. <Lesson Complete><XP Earned><Streak Status><Celebrate | Continue>",
+          "action": "7. <Leaderboard View><Rank: ___><Tabs: Friends | Global><Challenge Button>"
+        },
+        {
+          "state": "8. <Challenge Screen><Mode Selection><Invite Button | Pending Status>",
+          "action": "9. <Challenge Progress><User Score vs Opponent><Practice or Continue>"
+        },
+        {
+          "state": "10. <Review Tab><Score %><Reminder: On | Off><Set or Edit Reminder>",
+          "action": "11. <Reminder Setup><Repeat Option><Time Input><Save Button>"
+        },
+        {
+          "state": "12. <Grammar Test><Question: ___><Input Type><Submit | Next>",
+          "action": "13. <Grammar Result><Score><Level Unlocked><Badge or Continue>"
+        },
+        {
+          "state": "14. <Settings><Offline Mode: On | Off><Download Courses Option>",
+          "action": "15. <Download Screen><Course List><Download Status><Back>"
+        },
+        {
+          "state": "16. <Welcome Setup><Language Selection><Goal Setting><Path Choice>",
+          "action": "17. <Speaking Practice><Word Prompt><Mic Input><Score + Feedback>"
+        },
+        {
+          "state": "18. <Mistake Review><User Answer vs Correct Answer><Retry or Hint>",
+          "action": "19. <Mini Badge or Achievement><Unlocked Item><Continue>"
+        },
+        {
+          "state": "20. <Lesson Wrap-Up><Accuracy | Progress><Options: Share | Back>",
+          "action": ""
+        }
+      ]
+    }
+  ]
+}
