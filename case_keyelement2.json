@@ -1,0 +1,254 @@
+{
+  "cases": [
+    {
+      "case_id": "s-a testcase1",
+      "key_element": "downtown clinic(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase2",
+      "key_element": "confirm (difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase3",
+      "key_element": "250(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase4",
+      "key_element": "payment(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase5",
+      "key_element": "liked(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase6",
+      "key_element": "call button(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase7",
+      "key_element": "delivery(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase8",
+      "key_element": "search(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase9",
+      "key_element": "JOHN DOE(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase10",
+      "key_element": "subtitles settings(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase11",
+      "key_element": "module content(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase12",
+      "key_element": "message driver(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase13",
+      "key_element": "device control(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase14",
+      "key_element": "information and share(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase15",
+      "key_element": "bookmark(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase16",
+      "key_element": "navigation(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase17",
+      "key_element": "information(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase18",
+      "key_element": "information(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase19",
+      "key_element": "post(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase20",
+      "key_element": "sleep,start,wake(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase21",
+      "key_element": "comments(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase22",
+      "key_element": "book information(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase23",
+      "key_element": "lesson(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase24",
+      "key_element": "booking(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase25",
+      "key_element": "queen(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase26",
+      "key_element": "inbox(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase27",
+      "key_element": "search results(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase28",
+      "key_element": "search bar(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase29",
+      "key_element": "pay information(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase30",
+      "key_element": "new user(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase31",
+      "key_element": "information(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase32",
+      "key_element": "chart view(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase33",
+      "key_element": "pay information(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase34",
+      "key_element": "sent(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase35",
+      "key_element": "confirmed information(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase36",
+      "key_element": "activity(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase37",
+      "key_element": "liked(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase38",
+      "key_element": "Uffizi Gallery(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase39",
+      "key_element": "next lesson(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase40",
+      "key_element": "sound(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase41",
+      "key_element": "travel(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase42",
+      "key_element": "confirmation(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase43",
+      "key_element": "brightness(50%)(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase44",
+      "key_element": "sent(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase45",
+      "key_element": "transcript(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase46",
+      "key_element": "return(middle)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase47",
+      "key_element": "summary and information(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase48",
+      "key_element": "chat windoe(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase49",
+      "key_element": "information(difficult)",
+      "steps": []
+    },
+    {
+      "case_id": "s-a testcase50",
+      "key_element": "font settings(middle)",
+      "steps": []
+    }
+  ]
+}

@@ -1,0 +1,1504 @@
+{
+  "cases": [
+    {
+      "case_id": "s-a testcase1",
+      "key_element": "account",
+      "steps": [
+        {
+          "state": "<Create an Account /><BACK /><NEXT />",
+          "action": "touch:<None />"
+        },
+        {
+          "state": "<Create an Account /><BACK /><NEXT />",
+          "action": "set_text:<None />,dummy_user_input"
+        },
+        {
+          "state": "<Create an Account /><dummy_user_input /><BACK /><NEXT />",
+          "action": "kill_app"
+        },
+        {
+          "state": "<Apps list /><Search />",
+          "action": "start_app"
+        },
+        {
+          "state": "<welcome><Learn Languages /><Get Started /><Have an account? Log in /></welcome>",
+          "action": "touch:<Have an account? Log in />"
+        },
+        {
+          "state": "<What type of account do you have? /><Personal use /><Most common /><Work and School /><I have an SSO code />",
+          "action": "touch:<I have an SSO code />"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase2",
+      "key_element": "app list,search",
+      "steps": [
+        {
+          "state": "<Ungültige Daten /><Die angegebene E-Mail Adresse oder Telefonnummer ist ungültig. /><OK />",
+          "action": "touch:<OK />"
+        },
+        {
+          "state": "<SEBLAU.AUTH.GENERICAUTHSCREEN /><Willkommen! /><Bitte melde dich mit deiner E-Mail-Adresse oder deiner Telefonnummer an. /><E-Mail oder Telefonnummer /><Weiter><Weiter /></Weiter>",
+          "action": "set_text:<E-Mail oder Telefonnummer />,dummy_user_input"
+        },
+        {
+          "state": "<SEBLAU.AUTH.GENERICAUTHSCREEN /><Willkommen! /><Bitte melde dich mit deiner E-Mail-Adresse oder deiner Telefonnummer an. /><dummy_user_input /><Weiter><Weiter /></Weiter>",
+          "action": "touch:<Weiter />"
+        },
+        {
+          "state": "<Ungültige Daten /><Die angegebene E-Mail Adresse oder Telefonnummer ist ungültig. /><OK />",
+          "action": "touch:<OK />"
+        },
+        {
+          "state": "<SEBLAU.AUTH.GENERICAUTHSCREEN /><Willkommen! /><Bitte melde dich mit deiner E-Mail-Adresse oder deiner Telefonnummer an. /><dummy_user_input /><Weiter><Weiter /></Weiter>",
+          "action": "kill_app"
+        },
+        {
+          "state": "<Apps list /><Search /><Wi-Fi />",
+          "action": "start_app"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase3",
+      "key_element": "highlights",
+      "steps": [
+        {
+          "state": "<Instagram Profile><Edit Profile><Name Field: \"user123\"><Bio Field: \"Travel & Coffee\"><Website Field: \"\">",
+          "action": "set_text:<Bio Field>, \"Digital Nomad | Photographer | Espresso Addict\""
+        },
+        {
+          "state": "<Instagram Profile><Edit Profile><Name Field: \"user123\"><Bio Field: \"Digital Nomad | Photographer | Espresso Addict\"><Website Field: \"\">",
+          "action": "set_text:<Website Field>, \"https://nomadlens.com\""
+        },
+        {
+          "state": "<Instagram Profile><Edit Profile><Name Field: \"user123\"><Bio Field: \"Digital Nomad | Photographer | Espresso Addict\"><Website Field: \"https://nomadlens.com\"><Private Account: Off>",
+          "action": "touch:<Private Account: Off>"
+        },
+        {
+          "state": "<Instagram Profile><Edit Profile><Name Field: \"user123\"><Bio Field: \"Digital Nomad | Photographer | Espresso Addict\"><Website Field: \"https://nomadlens.com\"><Private Account: On>",
+          "action": "touch:<Save Changes>"
+        },
+        {
+          "state": "<Instagram Profile><Posts Grid><Highlights><Tagged Photos>",
+          "action": "touch:<Highlights>"
+        },
+        {
+          "state": "<Instagram Highlights><Create New><Cover Photo: Default><Title: \"\">",
+          "action": "set_text:<Title>, \"Europe 2023\""
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase4",
+      "key_element": "repeat on",
+      "steps": [
+        {
+          "state": "<Spotify Library><Liked Songs: 1,243><Playlists: 37><Albums: 89><Artists: 156>",
+          "action": "touch:<Liked Songs>"
+        },
+        {
+          "state": "<Spotify Liked Songs><Filter: All><Sort: Recently Added><Downloaded: Off>",
+          "action": "touch:<Filter: All>"
+        },
+        {
+          "state": "<Spotify Liked Songs><Filter: Downloaded><Sort: Title><Downloaded: On>",
+          "action": "touch:<Sort: Title>"
+        },
+        {
+          "state": "<Spotify Liked Songs><Song: \"Bohemian Rhapsody\"><Artist: Queen><Album: \"A Night at the Opera\"><Duration: 5:55>",
+          "action": "touch:<Song: \"Bohemian Rhapsody\">"
+        },
+        {
+          "state": "<Spotify Now Playing><\"Bohemian Rhapsody\"><Progress: 2:30/5:55><Shuffle: Off><Repeat: Off>",
+          "action": "touch:<Repeat: Off>"
+        },
+        {
+          "state": "<Spotify Now Playing><\"Bohemian Rhapsody\"><Progress: 3:45/5:55><Shuffle: Off><Repeat: On>",
+          "action": "touch:<Add to Playlist>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase5",
+      "key_element": "email,password",
+      "steps": [
+        {
+          "state": "<Uber Home><Where to?><Current Location: 456 Market St><Destination: \"\">",
+          "action": "set_text:<Destination>, \"San Francisco International Airport\""
+        },
+        {
+          "state": "<Uber Route><456 Market St to SFO><Distance: 14.2 mi><Est. Time: 28 min><UberX: $32><Uber Comfort: $42>",
+          "action": "touch:<UberX: $32>"
+        },
+        {
+          "state": "<Uber Confirm><Pickup: 456 Market St><Drop-off: SFO><Payment: Visa ****1234><Promo: None>",
+          "action": "touch:<Payment: Visa ****1234>"
+        },
+        {
+          "state": "<Uber Payment><Add Payment Method><Credit Card><PayPal><Apple Pay>",
+          "action": "touch:<PayPal>"
+        },
+        {
+          "state": "<Uber PayPal Login><Email: \"\"><Password: \"\">",
+          "action": "set_text:<Email>, \"user@example.com\""
+        },
+        {
+          "state": "<Uber PayPal Login><Email: \"user@example.com\"><Password: \"••••••••\">",
+          "action": "touch:<Log In>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase6",
+      "key_element": "orange phoenix",
+      "steps": [
+        {
+          "state": "<Notion Dashboard><Pages: 14><Templates: 7><Trash: 2><Search: \"\">",
+          "action": "set_text:<Search>, \"Project Phoenix\""
+        },
+        {
+          "state": "<Notion Search Results><\"Project Phoenix\" Page><\"Phoenix Meeting Notes\" Page><\"Budget Phoenix\" Database>",
+          "action": "touch:<\"Project Phoenix\" Page>"
+        },
+        {
+          "state": "<Notion Page><Title: \"Project Phoenix\"><Cover Image: None><Icon: 🔥><Created: 2 days ago>",
+          "action": "touch:<Cover Image>"
+        },
+        {
+          "state": "<Notion Cover Gallery><Unsplash><Upload><Color><None>",
+          "action": "touch:<Unsplash>"
+        },
+        {
+          "state": "<Notion Unsplash><Search: \"phoenix bird\"><Results: 47><Selected: Orange Phoenix>",
+          "action": "touch:<Selected: Orange Phoenix>"
+        },
+        {
+          "state": "<Notion Page><Title: \"Project Phoenix\"><Cover: Orange Phoenix><Icon: 🔥><Share: Private>",
+          "action": "touch:<Share: Private>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase7",
+      "key_element": "highlight",
+      "steps": [
+        {
+          "state": "<Zoom Meeting><Video: On><Audio: Mute><Participants: 7><Chat: Open>",
+          "action": "touch:<Audio: Mute>"
+        },
+        {
+          "state": "<Zoom Controls><Share Screen><Record><Reactions><More>",
+          "action": "touch:<Share Screen>"
+        },
+        {
+          "state": "<Zoom Screen Share><Share Window: Slack><Share Tab: Google Docs><Share Entire Screen>",
+          "action": "touch:<Share Tab: Google Docs>"
+        },
+        {
+          "state": "<Zoom Screen Sharing><Doc: \"Q3 Strategy\"><Viewers: 7><Annotate: Off>",
+          "action": "touch:<Annotate: On>"
+        },
+        {
+          "state": "<Zoom Annotation><Pen Tool><Highlighter><Text><Save>",
+          "action": "touch:<Highlighter>"
+        },
+        {
+          "state": "<Zoom Annotating><Highlight: \"Key Objective\"><Color: Yellow><Opacity: 70%>",
+          "action": "touch:<Save>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase8",
+      "key_element": "dogvideos",
+      "steps": [
+        {
+          "state": "<TikTok For You><Video: \"Cat playing piano\" (12.3M views)><Like: 0><Comment: 0><Share: 0><Follow: @catlover>",
+          "action": "touch:<Like>"
+        },
+        {
+          "state": "<TikTok Video><Comments: 4.2K><Add Comment: \"\">",
+          "action": "set_text:<Add Comment>, \"This is purrfect! 🐱\""
+        },
+        {
+          "state": "<TikTok Commenting><Keyboard: Open><Text: \"This is purrfect! 🐱\"><Post>",
+          "action": "touch:<Post>"
+        },
+        {
+          "state": "<TikTok Profile><@catlover><Videos: 187><Followers: 2.4M><Following: 89>",
+          "action": "touch:<Following: 89>"
+        },
+        {
+          "state": "<TikTok Following><Search: \"\">",
+          "action": "set_text:<Search>, \"dogvideos\""
+        },
+        {
+          "state": "<TikTok Search Results><@dogvideos><Videos: 342><Followers: 1.1M><Follow Button>",
+          "action": "touch:<Follow Button>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase9",
+      "key_element": "email",
+      "steps": [
+        {
+          "state": "<LinkedIn Feed><Post: \"Excited to join XYZ Corp!\"><Like: 0><Comment: 0><Repost: 0>",
+          "action": "touch:<Comment>"
+        },
+        {
+          "state": "<LinkedIn Commenting><Text: \"\">",
+          "action": "set_text:<Text>, \"Congratulations! Looking forward to seeing your impact.\""
+        },
+        {
+          "state": "<LinkedIn Commenting><Text: \"Congratulations! Looking forward to seeing your impact.\"><Post>",
+          "action": "touch:<Post>"
+        },
+        {
+          "state": "<LinkedIn Profile><Experience: 3 roles><Education: Stanford><Skills: 12><Contact Info>",
+          "action": "touch:<Contact Info>"
+        },
+        {
+          "state": "<LinkedIn Contact Info><Email: \"\"><Phone: \"\">",
+          "action": "set_text:<Email>, \"professional@email.com\""
+        },
+        {
+          "state": "<LinkedIn Contact Info><Email: \"professional@email.com\"><Phone: \"\"><Save>",
+          "action": "touch:<Save>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase10",
+      "key_element": "shared album name",
+      "steps": [
+        {
+          "state": "<Google Photos><Photos: 2,341><Albums: 12><Utilities: 3><Search: \"\">",
+          "action": "set_text:<Search>, \"beach vacation 2023\""
+        },
+        {
+          "state": "<Google Photos Search><Results: 47><\"Beach Vacation 2023\" Album><\"Sunset at Malibu\" Photo>",
+          "action": "touch:<\"Beach Vacation 2023\" Album>"
+        },
+        {
+          "state": "<Google Photos Album><Photos: 24><Share: 0><Add to Album: +><Options: ⋮>",
+          "action": "touch:<Options: ⋮>"
+        },
+        {
+          "state": "<Google Photos Options><Download><Add to Shared Album><Delete><Edit Album>",
+          "action": "touch:<Add to Shared Album>"
+        },
+        {
+          "state": "<Google Photos Share><Create Link><Send in App><Shared Album Name: \"\">",
+          "action": "set_text:<Shared Album Name>, \"Summer Memories with Friends\""
+        },
+        {
+          "state": "<Google Photos Share><Shared Album Name: \"Summer Memories with Friends\"><Create Link>",
+          "action": "touch:<Create Link>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase11",
+      "key_element": "story archive:on",
+      "steps": [
+        {
+          "state": "<Instagram Profile><Username: \"travel_photos\"><Posts: 127><Followers: 8.3K><Following: 412><Bio: \"Wanderlust photographer\">",
+          "action": "edit_profile:<Bio: \"Travel photographer | 30 countries | Canon EOS R5\">"
+        },
+        {
+          "state": "<Instagram Edit Profile><Bio: \"Travel photographer | 30 countries | Canon EOS R5\"><Website: \"\"><Contact: Off>",
+          "action": "add_website:<https://nomadlens.com>"
+        },
+        {
+          "state": "<Instagram Profile><Website: \"https://nomadlens.com\"><Contact: Off><Action Button: None>",
+          "action": "add_action_button:<Email: \"bookings@nomadlens.com\">"
+        },
+        {
+          "state": "<Instagram Profile><Action Button: \"Email\"><Highlights: 0><Story Archive: Off>",
+          "action": "create_highlight:<\"Japan 2023\", Cover: \"Mount Fuji\", Stories: 12>"
+        },
+        {
+          "state": "<Instagram Profile><Highlights: 1><Story Archive: Off><Tagged Photos: 34>",
+          "action": "enable_archive:<Auto-save Stories: On, Save to Archive: All>"
+        },
+        {
+          "state": "<Instagram Profile><Story Archive: On><Close Friends: 0><Muted Accounts: 12>",
+          "action": "manage_muted:<Unmute: 5 accounts, Add to Close Friends: 23 accounts>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase12",
+      "key_element": "doenloaded",
+      "steps": [
+        {
+          "state": "<Spotify Home><Recently Played: 5 albums><Made For You: 3 playlists><Browse: Genres>",
+          "action": "create_playlist:<\"Chill Vibes\", Public, Collaborative: Off>"
+        },
+        {
+          "state": "<Spotify Playlist><\"Chill Vibes\"><0 songs><Sort: Custom><Download: Off>",
+          "action": "add_songs:<\"Blinding Lights\", \"Watermelon Sugar\", \"Levitating\">"
+        },
+        {
+          "state": "<Spotify Playlist><\"Chill Vibes\"><3 songs><Duration: 11:24><Cover: Default>",
+          "action": "edit_details:<Description: \"Perfect for lazy Sundays\", Cover: \"Beach Sunset\">"
+        },
+        {
+          "state": "<Spotify Playlist><\"Chill Vibes\"><Collaborative: Off><Share: Copy Link><Smart Shuffle: Off>",
+          "action": "enable_smart_shuffle:<On, Mix similar songs>"
+        },
+        {
+          "state": "<Spotify Playlist><\"Chill Vibes\"><Smart Shuffle: On><Download: Off><Add to Profile: No>",
+          "action": "download_for_offline:<High Quality, Add to Profile>"
+        },
+        {
+          "state": "<Spotify Playlist><\"Chill Vibes\"><Downloaded: 3/3><Profile: Added><Listeners: 1>",
+          "action": "share_playlist:<Instagram Story, Include Link>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase13",
+      "key_element": "contact driver",
+      "steps": [
+        {
+          "state": "<Uber Home><Where to?: \"\"><Current Location: 123 Main St><Favorites: 2><Recent: 5>",
+          "action": "set_destination:<\"SFO Airport, Terminal 3\">"
+        },
+        {
+          "state": "<Uber Route><123 Main St to SFO><Distance: 14.2 mi><Est. Time: 28 min><UberX: $32><Comfort: $42>",
+          "action": "schedule_ride:<Tomorrow 8:00 AM, Comfort, Add Note: \"Flight at 10:30\">"
+        },
+        {
+          "state": "<Uber Scheduled><Tomorrow 8:00 AM><Comfort><Note: \"Flight at 10:30\"><Payment: Visa ****1234>",
+          "action": "change_payment:<PayPal, Default>"
+        },
+        {
+          "state": "<Uber Scheduled><PayPal><Comfort><Flight Note><Remind: 15 min before>",
+          "action": "share_trip:<Send to: \"emergency@email.com\", Include ETA>"
+        },
+        {
+          "state": "<Uber On Trip><Driver: Mike><Car: Toyota Camry><ETA: 26 min><Share: Active>",
+          "action": "contact_driver:<Message: \"I'm wearing a blue jacket\"}"
+        },
+        {
+          "state": "<Uber Trip End><Rating: 5 stars><Tip: $5><Receipt: Email>",
+          "action": "save_driver:<Add Mike to Favorites, Rate: 5 stars>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase14",
+      "key_element": "club",
+      "steps": [
+        {
+          "state": "<Duolingo Home><Streak: 7 days><Gems: 450><League: Gold><Daily Goal: 20 XP>",
+          "action": "start_lesson:<Spanish, Unit 4: Travel, Hard Mode>"
+        },
+        {
+          "state": "<Duolingo Lesson><Spanish><Question: \"¿Dónde está el baño?\"><Hearts: 3><Timer: 45s>",
+          "action": "use_power_up:<Double XP, 30 seconds>"
+        },
+        {
+          "state": "<Duolingo Lesson><Double XP Active><Correct Answers: 7><XP: 14><Hearts: 2>",
+          "action": "activate_streak_freeze:<Purchase with 100 gems>"
+        },
+        {
+          "state": "<Duolingo Lesson Complete><XP: 28><Perfect Lesson><New Words: 3><Progress: 65%>",
+          "action": "share_progress:<Share to Friends, Include Streak>"
+        },
+        {
+          "state": "<Duolingo Profile><Spanish: Level 12><XP: 8,450><Achievements: 7><Followers: 23>",
+          "action": "join_club:<\"Travel Spanish Lovers\", Weekly XP Goal: 500>"
+        },
+        {
+          "state": "<Duolingo Club><\"Travel Spanish Lovers\"><Rank: 3/15><Weekly XP: 320/500><Club Feed: 2 new posts>",
+          "action": "post_in_club:<\"Just learned 'receipt' in Spanish - 'el recibo'!\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase15",
+      "key_element": "goal",
+      "steps": [
+        {
+          "state": "<MyFitnessPal Home><Calories: 1,450/2,000><Protein: 78g/120g><Water: 4/8 cups><Exercise: 320 calories burned>",
+          "action": "log_meal:<Breakfast, \"Oatmeal with berries\", 320 calories>"
+        },
+        {
+          "state": "<MyFitnessPal Diary><Breakfast: 320 calories><Remaining: 1,230><Quick Add: 0><Notes: \"\">",
+          "action": "scan_barcode:<\"Chobani Greek Yogurt\", Add to Lunch>"
+        },
+        {
+          "state": "<MyFitnessPal Diary><Lunch: 420 calories><Yogurt Added><Nutrients: {Protein: +17g, Sugar: +12g}>",
+          "action": "copy_meal:<\"Yesterday's Dinner\", Paste to Today's Dinner>"
+        },
+        {
+          "state": "<MyFitnessPal Diary><Dinner: 580 calories><Total: 1,320><Remaining: 680><Macros: {P: 65g, C: 140g, F: 38g}>",
+          "action": "log_exercise:<\"30 min run\", 280 calories, Map: On>"
+        },
+        {
+          "state": "<MyFitnessPal Complete><Calories: 1,600/2,000><Exercise: 600><Net: 1,000><Streak: 12 days>",
+          "action": "set_goal:<New Daily Calories: 1,800, Protein: 130g, Weight Goal: Maintain>"
+        },
+        {
+          "state": "<MyFitnessPal Progress><Weight: 158 lbs><Trend: -0.5 lbs/week><Measurements: {Waist: -1\", Hips: -0.5\"}><Reports: 3>",
+          "action": "export_data:<CSV, Date Range: Last 30 days, Include: Weight + Measurements>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase16",
+      "key_element": "copied",
+      "steps": [
+        {
+          "state": "<MyFitnessPal Home><Calories: 1,240/1,800><Carbs: 145g><Protein: 78g><Fat: 42g>",
+          "action": "touch:<Add Food>"
+        },
+        {
+          "state": "<MyFitnessPal Search><Search: \"\"><Recent: \"chicken breast\", \"brown rice\">",
+          "action": "set_text:<Search: \"greek yogurt\">"
+        },
+        {
+          "state": "<MyFitnessPal Results><\"Greek Yogurt\" Brands: 12><Recent: 1>",
+          "action": "touch:<\"Plain Greek Yogurt, 1 cup\">"
+        },
+        {
+          "state": "<MyFitnessPal Confirm><Plain Greek Yogurt><Calories: 120><Protein: 22g><Meal: Breakfast>",
+          "action": "touch:<Breakfast>"
+        },
+        {
+          "state": "<MyFitnessPal Diary><Breakfast: 320 calories><Remaining: 1,260><Quick Tools: Copy, Delete>",
+          "action": "touch:<Copy>"
+        },
+        {
+          "state": "<MyFitnessPal Diary><Lunch: Empty><Copied: \"Plain Greek Yogurt\"><Quick Add: 0>",
+          "action": "touch:<Paste>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase17",
+      "key_element": "updated deadline",
+      "steps": [
+        {
+          "state": "<Gmail Inbox><Search: \"\"><Labels: 12><Priority: 3 unread><Compose: +>",
+          "action": "set_text:<Search: \"project deadline\">"
+        },
+        {
+          "state": "<Gmail Search Results><\"Project deadline\" emails: 7><Unread: 2><From: Manager>",
+          "action": "touch:<Select 3 emails>"
+        },
+        {
+          "state": "<Gmail Selected><3 emails><Actions: Archive, Delete, Mark Read>",
+          "action": "touch:<Mark Read>"
+        },
+        {
+          "state": "<Gmail Compose><New Message><To: \"\">",
+          "action": "set_text:<To: \"team@company.com\">"
+        },
+        {
+          "state": "<Gmail Compose><To: team@company.com><Subject: \"\"><Body: \"\">",
+          "action": "set_text:<Subject: \"Updated Deadline\">"
+        },
+        {
+          "state": "<Gmail Compose><Subject: \"Updated Deadline\"><Body: \"New timeline attached\"><Attachment: None>",
+          "action": "touch:<Attach File> → touch:<Send>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase18",
+      "key_element": "share",
+      "steps": [
+        {
+          "state": "<Airbnb App><Search: \"\"><Recent: \"Paris\", \"Tokyo\"><Filters: None>",
+          "action": "set_text:<Search: \"Rome, Italy\">"
+        },
+        {
+          "state": "<Airbnb Search Results><Rome: 312 stays><Price Range: $50-150><Dates: Not set>",
+          "action": "touch:<Set Dates> → touch:<Select July 15-22>"
+        },
+        {
+          "state": "<Airbnb Filters><Entire Place><WiFi><Kitchen><Max Price: $120>",
+          "action": "touch:<Apply Filters>"
+        },
+        {
+          "state": "<Airbnb Listing><\"Cozy Trastevere Apartment\"><Photos: 24><Rating: 4.8><Price: $110/night>",
+          "action": "touch:<Save>"
+        },
+        {
+          "state": "<Airbnb Saved><\"Cozy Trastevere Apartment\"><Wishlist: \"Summer Trips\"><Share: Available>",
+          "action": "touch:<Share>"
+        },
+        {
+          "state": "<Airbnb Share><\"Cozy Trastevere Apartment\"><Options: Message, Email, Copy Link>",
+          "action": "touch:<Message> → set_text:<\"Check out this place for our Italy trip!\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase19",
+      "key_element": "Spanish audio",
+      "steps": [
+        {
+          "state": "<Netflix Browse><Profile: \"Kids\"><Continue Watching: 2 shows><My List: 12 titles><Genres: Animation, Family>",
+          "action": "touch:<Search>"
+        },
+        {
+          "state": "<Netflix Search><Search: \"\">",
+          "action": "set_text:<Search: \"Minecraft\">"
+        },
+        {
+          "state": "<Netflix Results><\"Minecraft: Story Mode\"><Rating: 4.2><Match: 85%><Episodes: 5>",
+          "action": "touch:<Add to My List>"
+        },
+        {
+          "state": "<Netflix Details><\"Minecraft: Story Mode\"><Audio: English><Subtitles: Off><Play From: Beginning>",
+          "action": "touch:<Audio & Subtitles>"
+        },
+        {
+          "state": "<Netflix Audio Settings><English (Original)><Spanish><Audio Description: Off>",
+          "action": "touch:<Spanish>"
+        },
+        {
+          "state": "<Netflix Now Playing><\"Minecraft: Story Mode\"><Episode 1><Spanish Audio><Subtitles: Spanish><Progress: 00:00>",
+          "action": "touch:<Play>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase20",
+      "key_element": "logged 150",
+      "steps": [
+        {
+          "state": "<MyFitnessPal Diary><Add Food>",
+          "action": "touch:<Search>"
+        },
+        {
+          "state": "<MFP Search><Query: \"\">",
+          "action": "set_text:<Query: \"oatmeal\">"
+        },
+        {
+          "state": "<MFP Results><\"Oatmeal\" Brands: 15>",
+          "action": "touch:<\"Quaker Instant Oatmeal\">"
+        },
+        {
+          "state": "<MFP Serving><1 cup><Calories: 150>",
+          "action": "touch:<Add>"
+        },
+        {
+          "state": "<MFP Diary><Breakfast: 150 cal><Remaining: 1,650>",
+          "action": "touch:<Save>"
+        },
+        {
+          "state": "<MFP Summary><Daily Goal: 1,800><Logged: 150>",
+          "action": "touch:<Quick Add>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase21",
+      "key_element": "followed Queen",
+      "steps": [
+        {
+          "state": "<Spotify Home><Now Playing: \"\"><Search: \"\"><Library: 3 playlists>",
+          "action": "play_track:<\"Bohemian Rhapsody - Queen\">"
+        },
+        {
+          "state": "<Spotify Playing><\"Bohemian Rhapsody\"><Progress: 1:23/5:55><Volume: 60%><Shuffle: Off>",
+          "action": "add_to_queue:<\"Don't Stop Me Now - Queen\">"
+        },
+        {
+          "state": "<Spotify Queue><2 tracks><Next: \"Don't Stop Me Now\"><Repeat: Off>",
+          "action": "create_playlist:<\"Queen Classics\", Add current track>"
+        },
+        {
+          "state": "<Spotify Playlist><\"Queen Classics\"><1 track><Public: Yes><Collaborative: No>",
+          "action": "share_playlist:<Send to: \"music-friends@email.com\", Include link>"
+        },
+        {
+          "state": "<Spotify Social><Shared Playlist><Likes: 0><Comments: 1>",
+          "action": "follow_artist:<Follow: Queen, Enable notifications>"
+        },
+        {
+          "state": "<Spotify Artist><Queen><Top Track: \"Bohemian Rhapsody\"><Monthly Listeners: 32M>",
+          "action": "set_sleep_timer:<Duration: 30 minutes, Fade out: Yes>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase22",
+      "key_element": "playlist updated",
+      "steps": [
+        {
+          "state": "<Spotify Home><Search: \"\"><Library: 3 playlists><Recent: \"Lo-fi Beats\">",
+          "action": "play_track:<\"Midnight City - M83\">"
+        },
+        {
+          "state": "<Now Playing><Midnight City><Volume: 60%><Shuffle: Off><Repeat: Off>",
+          "action": "add_to_queue:<\"Outro - M83\">"
+        },
+        {
+          "state": "<Queue><2 tracks><Next: Outro><Crossfade: 5s>",
+          "action": "create_playlist:<\"Late Night Drive\", Add current queue>"
+        },
+        {
+          "state": "<Playlist Created><Late Night Drive><3 tracks><Public: Yes>",
+          "action": "share_playlist:<Send to: \"roadtrip@email.com\", Include link>"
+        },
+        {
+          "state": "<Playlist Shared><Views: 1><Likes: 0><Collaborative: Off>",
+          "action": "edit_playlist:<Remove track: \"Outro\", Add: \"Wait - M83\">"
+        },
+        {
+          "state": "<Playlist Updated><Late Night Drive><3 tracks><Last Modified: 2 min ago>",
+          "action": "download_playlist:<For offline listening>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase23",
+      "key_element": "export complete",
+      "steps": [
+        {
+          "state": "<Notion Home><Recent: \"Project Plan\"><Templates: 4><Trash: 2>",
+          "action": "create_page:<\"Q3 Marketing Campaign\", Template: Meeting Notes>"
+        },
+        {
+          "state": "<Page Editing><Untitled><Blocks: 3><Last Edit: 2 min ago>",
+          "action": "add_block:<To-do: \"Finalize budget by Friday\", Assign: @sarah>"
+        },
+        {
+          "state": "<Page Updated><Q3 Marketing Campaign><Blocks: 12><Comments: 1 unresolved>",
+          "action": "share_page:<Invite: marketing@company.com, Can edit>"
+        },
+        {
+          "state": "<Page Shared><Viewers: 3><Editors: 2><Last View: 5 min ago>",
+          "action": "add_comment:<\"@sarah Please review slide deck\">"
+        },
+        {
+          "state": "<Comment Resolved><Slide deck approved><Page History: 7 versions>",
+          "action": "export_page:<Format: PDF, Include sub-pages>"
+        },
+        {
+          "state": "<Export Complete><Q3_Marketing_Plan.pdf><Size: 2.4MB><Sent to: downloads@company.com>",
+          "action": "set_reminder:<\"Send final version to stakeholders\", Due: Tomorrow 9 AM>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase24",
+      "key_element": "reinvested",
+      "steps": [
+        {
+          "state": "<Robinhood Home><Portfolio: +2.1%><Watchlist: 5><Cash: $1,240>",
+          "action": "search_stock:<\"TSLA\">"
+        },
+        {
+          "state": "<Stock Detail><TSLA: $248.76><Day Change: +1.8%><News: 2 new>",
+          "action": "add_to_watchlist:<TSLA, Alert: Price > $260>"
+        },
+        {
+          "state": "<Watchlist Updated><TSLA added><Alerts: 1 active><Similar Stocks: 3>",
+          "action": "place_order:<Buy 2 shares TSLA, Limit: $245>"
+        },
+        {
+          "state": "<Order Placed><Pending><Expires: EOD><Buying Power: $750>",
+          "action": "set_recurring:<Weekly $100 investment in TSLA>"
+        },
+        {
+          "state": "<Recurring Active><Next: Friday><Total Invested: $300><Performance: +4.2%>",
+          "action": "enable_dividend_reinvest:<TSLA, Reinvest all>"
+        },
+        {
+          "state": "<Dividend Reinvested><$12.40 reinvested><New Shares: 0.05><Portfolio Value: $1,305>",
+          "action": "export_statement:<Period: Last 30 days, Format: CSV>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase25",
+      "key_element": "database linked",
+      "steps": [
+        {
+          "state": "<Notion Calendar><Today: 3 events><Week view><Time zone: EST>",
+          "action": "create_event:<\"Client Demo\", July 15, 2:00-3:30 PM, Location: Zoom>"
+        },
+        {
+          "state": "<Event Created><Reminders: 15 min before><Participants: @sales-team><Description: Include deck link>",
+          "action": "integrate_zoom:<Auto-generate meeting link>"
+        },
+        {
+          "state": "<Zoom Linked><Meeting ID: 123-456-789><Password: 4Jk9L><Calendar updated>",
+          "action": "set_recurring:<Weekly on Tuesdays, End: Aug 31>"
+        },
+        {
+          "state": "<Recurring Set><Next: July 18><Exceptions: July 25><Total: 7 instances>",
+          "action": "share_event:<Send to: client@company.com, Include agenda>"
+        },
+        {
+          "state": "<Event Shared><RSVP: Accepted><Calendar invite sent><Attachment: Preview.pdf>",
+          "action": "link_database:<Connect to \"Client Projects\" database>"
+        },
+        {
+          "state": "<Database Linked><7 related items><Status: \"In Progress\"><Next action: \"Send follow-up email\">",
+          "action": "export_calendar:<Format: ICS, Include recurring events, Attachments: Yes>"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase26",
+      "key_element": "memory stored",
+      "steps": [
+        {
+          "state": "<Calculator App><Display: \"0\"><Memory: 0><History: Empty>",
+          "action": "set_text:<Input: \"123.45\">"
+        },
+        {
+          "state": "<Input Displayed><\"123.45\"><Operation: None><Memory: 0>",
+          "action": "touch:<Button: \"+\">"
+        },
+        {
+          "state": "<Operation Selected><\"123.45 +\"><Display: \"0\"><Memory: 123.45>",
+          "action": "set_text:<Input: \"67.89\">"
+        },
+        {
+          "state": "<Second Input><\"67.89\"><Operation: +><Memory: 123.45>",
+          "action": "touch:<Button: \"=\">"
+        },
+        {
+          "state": "<Result Displayed><\"191.34\"><History: 1 entry><Memory: 0>",
+          "action": "touch:<Button: \"M+\">"
+        },
+        {
+          "state": "<Memory Stored><M: 191.34><Display: \"0\"><History: 1>",
+          "action": "touch:<Button: \"MC\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase27",
+      "key_element": "favorite added",
+      "steps": [
+        {
+          "state": "<Weather App><Location: \"Current\"><Temp: 72°F><Forecast: 5-day>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search Active><Keyboard: Visible><Location: \"Current\">",
+          "action": "set_text:<Input: \"Tokyo, Japan\">"
+        },
+        {
+          "state": "<Query Input><\"Tokyo, Japan\"><Keyboard: Visible>",
+          "action": "touch:<Button: \"Search\">"
+        },
+        {
+          "state": "<Loading><Location: Tokyo><Temp: 84°F><Humidity: 65%>",
+          "action": "touch:<Button: \"24-Hour\">"
+        },
+        {
+          "state": "<Hourly View><Tokyo><12 time slots><Precipitation: 10%>",
+          "action": "touch:<Button: \"Add to Favorites\">"
+        },
+        {
+          "state": "<Favorite Added><Tokyo><Alerts: None><Updated: 2 min ago>",
+          "action": "touch:<Button: \"Share\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase28",
+      "key_element": "note pinned",
+      "steps": [
+        {
+          "state": "<Notes App><Folder: \"Work\"><Notes: 7><Search: \"\">",
+          "action": "touch:<Button: \"New Note\">"
+        },
+        {
+          "state": "<Blank Note><Title: \"Untitled\"><Cursor: Visible>",
+          "action": "set_text:<Input: \"Meeting with Client X - Key Points\">"
+        },
+        {
+          "state": "<Title Input><\"Meeting with Client X - Key Points\"><Body: Empty>",
+          "action": "touch:<Body Field>"
+        },
+        {
+          "state": "<Body Active><Keyboard: Visible><Title: Saved>",
+          "action": "set_text:<Input: \"1. Review Q3 deliverables"
+        },
+        {
+          "state": "<Content Saved><Body: 3 bullet points><Last edited: Now>",
+          "action": "touch:<Button: \"Pin\">"
+        },
+        {
+          "state": "<Note Pinned><Top of list><Reminder: None><Word count: 18>",
+          "action": "touch:<Button: \"Share via Email\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase29",
+      "key_element": "reminder set",
+      "steps": [
+        {
+          "state": "<Google Keep><Notes: 12><Pinned: 2><Search: \"\">",
+          "action": "touch:<Button: \"Take a note\">"
+        },
+        {
+          "state": "<New Note><Title: \"\">",
+          "action": "set_text:<Input: \"Grocery List\">"
+        },
+        {
+          "state": "<Title Added><\"Grocery List\"><Body: Empty>",
+          "action": "touch:<Body Field>"
+        },
+        {
+          "state": "<Body Active><Keyboard: Visible>",
+          "action": "set_text:<Input: \"• Milk"
+        },
+        {
+          "state": "<List Saved><3 unchecked items><Color: White>",
+          "action": "touch:<Button: \"Remind me\">"
+        },
+        {
+          "state": "<Reminder Set><Time: Tomorrow 8:00 AM><Location: None>",
+          "action": "touch:<Button: \"Archive\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase30",
+      "key_element": "shuffle on",
+      "steps": [
+        {
+          "state": "<Spotify Search><Query: \"\">",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Keyboard Active><Search: \"\">",
+          "action": "set_text:<Input: \"Billie Eilish\">"
+        },
+        {
+          "state": "<Query Input><\"Billie Eilish\">",
+          "action": "touch:<Button: \"Artists\">"
+        },
+        {
+          "state": "<Artist Results><Billie Eilish><Monthly Listeners: 82M>",
+          "action": "touch:<Button: \"Follow\">"
+        },
+        {
+          "state": "<Followed><Following: Yes><New Releases: On><shuffle: Off>",
+          "action": "touch:<Button: \"Shuffle Play\">"
+        },
+        {
+          "state": "<Now Playing><shuffle:on><\"bad guy\"><Queue: 50 songs>",
+          "action": "touch:<Button: \"Add to Playlist\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase31",
+      "key_element": "message",
+      "steps": [
+        {
+          "state": "<WhatsApp Chats><Unread: 3><Status: Online>",
+          "action": "touch:<Search Bar>"
+        },
+        {
+          "state": "<Search Active><Keyboard: Visible>",
+          "action": "set_text:<Input: \"Sarah\">"
+        },
+        {
+          "state": "<Query Input><\"Sarah\">",
+          "action": "touch:<Contact: \"Sarah Miller\">"
+        },
+        {
+          "state": "<Chat Open><Last seen: Today>",
+          "action": "touch:<Message Field>"
+        },
+        {
+          "state": "<Keyboard Active><text_input: ><Cursor: Visible>",
+          "action": "set_text:<Input: \"Hey! Are we still on for dinner at 7?\">"
+        },
+        {
+          "state": "<Message Typed:hey! are we still on for dinner at 7><Send Button: Visible>",
+          "action": "touch:<Button: \"Send\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase32",
+      "key_element": "add to cart",
+      "steps": [
+        {
+          "state": "<Amazon App><Search bar visible: \"Search Amazon\">",
+          "action": "touch:<Search field>"
+        },
+        {
+          "state": "<Keyboard active>",
+          "action": "set_text:<Input: \"noise cancelling headphones\">"
+        },
+        {
+          "state": "<Search results loaded><Filter button visible>",
+          "action": "touch:<Button: \"4★ & up\">"
+        },
+        {
+          "state": "<Filters applied><Sort dropdown visible>",
+          "action": "touch:<Button: \"Price: Low to High\">"
+        },
+        {
+          "state": "<Results sorted><Product: \"Sony WH-1000XM4\" visible><add to cart>",
+          "action": "touch:<Button: \"Add to Cart\">"
+        },
+        {
+          "state": "<Cart updated><Quantity selector visible>",
+          "action": "set_text:<Input: \"2\"> Action: touch:<Button: \"Proceed to checkout\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase33",
+      "key_element": "guests field",
+      "steps": [
+        {
+          "state": "<Airbnb App><Search location field visible: \"Where are you going?\">",
+          "action": "touch:<Location field>"
+        },
+        {
+          "state": "<Keyboard active>",
+          "action": "set_text:<Input: \"Kyoto, Japan\">"
+        },
+        {
+          "state": "<Location entered><Check-in field visible>",
+          "action": "touch:<Button: \"Check-in date\">"
+        },
+        {
+          "state": "<Calendar visible><Date selector active>",
+          "action": "touch:<Button: \"July 15\">"
+        },
+        {
+          "state": "<Check-in set><Guests field visible>",
+          "action": "touch:<Guests field>"
+        },
+        {
+          "state": "<Guest counter visible>",
+          "action": "set_text:<Input: \"2 guests\"> Action: touch:<Button: \"Search\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase34",
+      "key_element": "special instructions",
+      "steps": [
+        {
+          "state": "<Uber Eats><Search bar active>",
+          "action": "set_text:<Input: \"sushi near me\">"
+        },
+        {
+          "state": "<Restaurant list><\"Tokyo Sushi\" first result>",
+          "action": "touch:<Button: \"View menu\">"
+        },
+        {
+          "state": "<Menu visible><\"Dragon Roll\" item>",
+          "action": "touch:<Button: \"Add to order\">"
+        },
+        {
+          "state": "<Order summary><Quantity: 1>",
+          "action": "touch:<Button: \"Special instructions\">"
+        },
+        {
+          "state": "<Text field active>",
+          "action": "set_text:<Input: \"Extra spicy mayo\">"
+        },
+        {
+          "state": "<Instructions added><Checkout button visible>",
+          "action": "touch:<Button: \"Place order\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase35",
+      "key_element": "correct! badge",
+      "steps": [
+        {
+          "state": "<Question prompt><\"Translate: 'The bill, please'\">",
+          "action": "touch:<Answer field>"
+        },
+        {
+          "state": "<Keyboard active>",
+          "action": "set_text:<Input: \"La cuenta, por favor\">"
+        },
+        {
+          "state": "<Answer submitted><Correct! badge>",
+          "action": "touch:<Button: \"Next\">"
+        },
+        {
+          "state": "<New question><\"Fill in the blank: ___ agua\">",
+          "action": "touch:<Blank field>"
+        },
+        {
+          "state": "<Keyboard active>",
+          "action": "set_text:<Input: \"Quiero\"> Action: touch:<Button: \"Check\">"
+        },
+        {
+          "state": "<Answer submitted><Correct! badge>",
+          "action": "touch:<Button: \"Next\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase36",
+      "key_element": "cart updated",
+      "steps": [
+        {
+          "state": "<Airbnb Experiences><Search: \"\">",
+          "action": "set_text:<Input: \"surf lessons Malibu\">"
+        },
+        {
+          "state": "<Results list><\"2-Hour Beginner Surf\" first result>",
+          "action": "touch:<Button: \"Check availability\">"
+        },
+        {
+          "state": "<Calendar view><August 15 available>",
+          "action": "touch:<Button: \"Select\">"
+        },
+        {
+          "state": "<Guest field><Keyboard active>",
+          "action": "set_text:<Input: \"2 guests\">"
+        },
+        {
+          "state": "<Time slot><10:00 AM selected>",
+          "action": "touch:<Button: \"Add to cart\">"
+        },
+        {
+          "state": "<Cart updated><Special requests visible>",
+          "action": "touch:<Field: \"Any dietary restrictions?\"> Action: set_text:<Input: \"Vegetarian meals only\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase37",
+      "key_element": "shoes:nike alphafly",
+      "steps": [
+        {
+          "state": "<Title field active>",
+          "action": "set_text:<Input: \"Sunrise Tempo Run - PR Attempt\">"
+        },
+        {
+          "state": "<Title saved><Description field visible>",
+          "action": "touch:<Button: \"Add Description\">"
+        },
+        {
+          "state": "<Keyboard active>",
+          "action": "set_text:<Input: \"Felt strong despite humidity. Avg pace 4:45/km\">"
+        },
+        {
+          "state": "<Description saved><Gear selection visible>",
+          "action": "touch:<Button: \"Select Shoes\">"
+        },
+        {
+          "state": "<Dropdown menu><\"Nike Alphafly\" selected>",
+          "action": "touch:<Button: \"Save Activity\">"
+        },
+        {
+          "state": "<shoes:nike alphafly><Gear saved><Date selection visible>",
+          "action": "touch:<Button: \"Select Date\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase38",
+      "key_element": "review saved",
+      "steps": [
+        {
+          "state": "<Goodreads><Search: \"\">",
+          "action": "set_text:<Input: \"Project Hail Mary\">"
+        },
+        {
+          "state": "<Book page><\"Project Hail Mary by Andy Weir\">",
+          "action": "touch:<Button: \"Want to Read\">"
+        },
+        {
+          "state": "<Status updated><Rating field visible>",
+          "action": "touch:<Button: \"Rate it\">"
+        },
+        {
+          "state": "<Star selector><5 stars selected>",
+          "action": "touch:<Button: \"Add review\">"
+        },
+        {
+          "state": "<Review field active>",
+          "action": "set_text:<Input: \"Absolutely loved the science and humor! Best book of 2023\">"
+        },
+        {
+          "state": "<Review saved><Share button visible>",
+          "action": "touch:<Button: \"Post to Feed\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase39",
+      "key_element": "tag field active",
+      "steps": [
+        {
+          "state": "<Letterboxd><Search: \"\">",
+          "action": "set_text:<Input: \"Everything Everywhere All at Once\">"
+        },
+        {
+          "state": "<Film page><\"Everything Everywhere All at Once (2022)\">",
+          "action": "touch:<Button: \"Log\">"
+        },
+        {
+          "state": "<Rating interface><Heart icon visible>",
+          "action": "touch:<Button: \"Loved it\">"
+        },
+        {
+          "state": "<Rating saved><Review field active>",
+          "action": "set_text:<Input: \"A masterpiece of multiverse storytelling. Michelle Yeoh is incredible\">"
+        },
+        {
+          "state": "<Review saved><Tags visible>",
+          "action": "touch:<Button: \"Add Tags\">"
+        },
+        {
+          "state": "<Tag field active>",
+          "action": "set_text:<Input: \"multiverse, absurdist, emotional\"> Action: touch:<Button: \"Save\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase40",
+      "key_element": "myemail@gmail.com",
+      "steps": [
+        {
+          "state": "<YouTube><Search: \"\">",
+          "action": "set_text:<Input: \"How to make a pancake\">"
+        },
+        {
+          "state": "<Search results><\"How to make a pancake (video)\" first result>",
+          "action": "touch:<Button: \"Add to Watch Later\">"
+        },
+        {
+          "state": "<Added to Watch Later>",
+          "action": "touch:<Button: \"Home\">"
+        },
+        {
+          "state": "<Home screen><\"Watch Later\" section>",
+          "action": "touch:<Button: \"Sign in\">"
+        },
+        {
+          "state": "<Sign in screen><Email field visible>",
+          "action": "set_text:<Input: \"myemail@gmail.com\">"
+        },
+        {
+          "state": "<email address:myemail@gmail.com><Password field visible>",
+          "action": "set_text:<Input: \"mypassword\"> Action: touch:<Button: \"Sign in\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase41",
+      "key_element": "complexity:o((log n)^3)",
+      "steps": [
+        {
+          "state": "<Obsidian Knowledge Graph><Active note: \"Quantum Computing.md\" - 3 backlinks>",
+          "action": "touch:<Button: \"Add Connection\">"
+        },
+        {
+          "state": "<Connection panel><Search field active>",
+          "action": "set_text:<Input: \"Shor's Algorithm\">"
+        },
+        {
+          "state": "<Search results><\"Shor's Algorithm.md\" found>",
+          "action": "touch:<Button: \"Create Link\">"
+        },
+        {
+          "state": "<Link created><Graph view updated - 4 nodes>",
+          "action": "touch:<Button: \"Edit Properties\">"
+        },
+        {
+          "state": "<Properties panel><Field: \"Complexity\" active>",
+          "action": "set_text:<Input: \"O((log N)^3)\">"
+        },
+        {
+          "state": "<Properties saved><Metadata: {\"Complexity\": \"O((log N)^3)\", \"Year\": 1994}>",
+          "action": "touch:<Button: \"Open in Graph View\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase42",
+      "key_element": "tags",
+      "steps": [
+        {
+          "state": "<Zotero Library><Collection: \"Neuroplasticity Research\" - 27 items>",
+          "action": "touch:<Button: \"Add Item\">"
+        },
+        {
+          "state": "<Add menu><\"Add by Identifier\" selected>",
+          "action": "touch:<DOI field active>"
+        },
+        {
+          "state": "<Keyboard visible>",
+          "action": "set_text:<Input: \"10.1016/j.neuron.2020.05.034\">"
+        },
+        {
+          "state": "<Metadata retrieved><Title: \"Adult neurogenesis and synaptic plasticity\" - 2020>",
+          "action": "touch:<Button: \"Add to Collection\">"
+        },
+        {
+          "state": "<Item added><Tags panel visible>",
+          "action": "touch:<Button: \"Add Tags\">"
+        },
+        {
+          "state": "<Tag input active>",
+          "action": "set_text:<Input: \"hippocampus, adult neurogenesis, learning\"> Action: touch:<Button: \"Save & Sync\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase43",
+      "key_element": "drawing tools",
+      "steps": [
+        {
+          "state": "<TradingView Chart><Ticker: TSLA - 1D timeframe>",
+          "action": "touch:<Button: \"Add Indicator\">"
+        },
+        {
+          "state": "<Indicator search><Field active>",
+          "action": "set_text:<Input: \"Ichimoku Cloud\">"
+        },
+        {
+          "state": "<Indicator selected><Settings panel visible>",
+          "action": "touch:<Button: \"Edit Parameters\">"
+        },
+        {
+          "state": "<Parameter field><Conversion Line active>",
+          "action": "set_text:<Input: \"20\">"
+        },
+        {
+          "state": "<Parameters updated><Chart: Ichimoku Cloud (20,60,120)>",
+          "action": "touch:<Button: \"Add Drawing\">"
+        },
+        {
+          "state": "<Drawing tools><Trend Line selected>",
+          "action": "touch:<Start point: $248> Action: touch:<End point: $272> Action: touch:<Button: \"Save Analysis\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase44",
+      "key_element": "automation saved",
+      "steps": [
+        {
+          "state": "<Monday.com Board><Pulse: \"Website Redesign\" - 7 groups>",
+          "action": "touch:<Button: \"Add Automation\">"
+        },
+        {
+          "state": "<Automation Center><\"When status changes to Done\" selected>",
+          "action": "touch:<Button: \"Set Up Action\">"
+        },
+        {
+          "state": "<Action Config><\"Notify team in Slack\" active>",
+          "action": "set_text:<Input: \"#web-team: 🎉 Task completed! {{task_name}} by {{person}}\">"
+        },
+        {
+          "state": "<Notification Configured><Dynamic fields mapped>",
+          "action": "touch:<Button: \"Add Condition\">"
+        },
+        {
+          "state": "<Condition Builder><\"Only if priority is High\" selected> <save automation>",
+          "action": "touch:<Button: \"Save Automation\">"
+        },
+        {
+          "state": "<Automation Saved><Status: Active, Runs: 0/0 errors>",
+          "action": "touch:<Button: \"Test Automation\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase45",
+      "key_element": "second action",
+      "steps": [
+        {
+          "state": "<ClickUp Automation><Space: \"Mobile App Development\" - 12 folders>",
+          "action": "touch:<Button: \"Create Rule\">"
+        },
+        {
+          "state": "<Trigger Setup><\"Task moved to Review\" selected>",
+          "action": "touch:<Button: \"Add Action\">"
+        },
+        {
+          "state": "<Action Menu><\"Add comment\" active>",
+          "action": "set_text:<Input: \"@design-team Please review UI changes in attached screenshots\">"
+        },
+        {
+          "state": "<Comment Configured><Attachment: screenshots folder mapped>",
+          "action": "touch:<Button: \"Add Delay\">"
+        },
+        {
+          "state": "<Delay Settings><\"Wait 2 hours\" selected><add second action>",
+          "action": "touch:<Button: \"Add Second Action\">"
+        },
+        {
+          "state": "<Second Action><\"Change status to Approved\" configured>",
+          "action": "touch:<Button: \"Activate Rule\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase46",
+      "key_element": "schedule settings",
+      "steps": [
+        {
+          "state": "<Airtable Interface><Base: \"Product Catalog\" - 8 tables>",
+          "action": "touch:<Button: \"Add Sync\">"
+        },
+        {
+          "state": "<Sync Options><\"Google Sheets two-way\" selected>",
+          "action": "touch:<Button: \"Configure Mapping\">"
+        },
+        {
+          "state": "<Field Mapping><\"Product Name\" ↔ \"Title\" active>",
+          "action": "touch:<Button: \"Add Filter\">"
+        },
+        {
+          "state": "<Filter Builder><\"Only sync active products\" selected>",
+          "action": "set_text:<Input: \"{Status} = 'Active'\">"
+        },
+        {
+          "state": "<Filter Configured><Sync preview: 142/200 records> <set schedule>",
+          "action": "touch:<Button: \"Set Schedule\">"
+        },
+        {
+          "state": "<Schedule Settings><\"Every 15 minutes\" selected>",
+          "action": "touch:<Button: \"Start Sync\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase47",
+      "key_element": "message configured",
+      "steps": [
+        {
+          "state": "<Make.com Scenario><Module 1: \"Watch Google Sheets Rows\" - Connected>",
+          "action": "touch:<Button: \"Add Module\">"
+        },
+        {
+          "state": "<Module Selector><\"Filter\" tool selected>",
+          "action": "touch:<Button: \"Configure Filter\">"
+        },
+        {
+          "state": "<Filter Settings><Condition: \"Status equals Approved\" active>",
+          "action": "set_text:<Input: \"Approved\">"
+        },
+        {
+          "state": "<Filter Configured><Pass if: 1 condition met>",
+          "action": "touch:<Button: \"Add Slack Module\">"
+        },
+        {
+          "state": "<Slack Config><Channel field active>",
+          "action": "set_text:<Input: \"#approvals\">"
+        },
+        {
+          "state": "<Message Configured><Dynamic fields: {Row ID}, {Requester} mapped>",
+          "action": "touch:<Button: \"Schedule Scenario\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase48",
+      "key_element": "second action",
+      "steps": [
+        {
+          "state": "<Pipedrive Workflow><Deal Stage: \"Proposal Sent\" - 15 open deals>",
+          "action": "touch:<Button: \"Add Automation\">"
+        },
+        {
+          "state": "<Automation Builder><Trigger: \"Deal has been in stage 7 days\" selected>",
+          "action": "touch:<Button: \"Set Action\">"
+        },
+        {
+          "state": "<Action Menu><\"Send email reminder\" active>",
+          "action": "set_text:<Input: \"Subject: Follow-up on Proposal"
+        },
+        {
+          "state": "<Email Configured><Sender: sales@company.com>",
+          "action": "touch:<Button: \"Add Delay\">"
+        },
+        {
+          "state": "<Delay Settings><\"Wait 3 business days\" selected> <add second action>",
+          "action": "touch:<Button: \"Add Second Action\">"
+        },
+        {
+          "state": "<Second Action><\"Create follow-up task\" configured>",
+          "action": "touch:<Button: \"Activate Workflow\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase49",
+      "key_element": "urgent priority set",
+      "steps": [
+        {
+          "state": "<Zendesk Trigger><Ticket: \"Billing Inquiry\" - 8 matching tickets>",
+          "action": "touch:<Button: \"Create Trigger\">"
+        },
+        {
+          "state": "<Condition Builder><\"Ticket: Status equals Open\" selected>",
+          "action": "touch:<Button: \"Add Condition\">"
+        },
+        {
+          "state": "<Second Condition><\"Ticket: Priority equals High\" active>",
+          "action": "touch:<Button: \"Set Actions\">"
+        },
+        {
+          "state": "<Action Config><\"Set Priority to Urgent\" selected>",
+          "action": "touch:<Button: \"Add Notification\">"
+        },
+        {
+          "state": "<Notification Settings><\"Email Group: billing-team@company.com\" active><input_field>",
+          "action": "set_text:<Input: \"URGENT: High-priority billing ticket {{ticket.id}} requires immediate attention\">"
+        },
+        {
+          "state": "<Trigger Ready><Conditions: 2/2 met, Actions: 2><urgent priority set>",
+          "action": "touch:<Button: \"Trigger\">"
+        }
+      ]
+    },
+    {
+      "case_id": "s-a testcase50",
+      "key_element": "second action",
+      "steps": [
+        {
+          "state": "<QuickBooks Online><Invoice: \"Overdue Payments\" - 12 invoices>",
+          "action": "touch:<Button: \"Create Automation\">"
+        },
+        {
+          "state": "<Automation Builder><Trigger: \"Invoice overdue by 7 days\" selected>",
+          "action": "touch:<Button: \"Add Action\">"
+        },
+        {
+          "state": "<Action Menu><\"Send reminder email\" active>",
+          "action": "set_text:<Input: \"Subject: Payment Reminder - Invoice {{invoice.number}}"
+        },
+        {
+          "state": "<Email Configured><From: billing@company.com>",
+          "action": "touch:<Button: \"Add Delay\">"
+        },
+        {
+          "state": "<Delay Settings><\"Wait 5 business days\" selected>",
+          "action": "touch:<Button: \"Add Second Action\">"
+        },
+        {
+          "state": "<Second Action><\"Apply late fee: 2%\" configured>",
+          "action": "touch:<Button: \"Save Automation\">"
+        }
+      ]
+    }
+  ]
+}
